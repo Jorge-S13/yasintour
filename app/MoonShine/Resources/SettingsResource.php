@@ -13,7 +13,6 @@ use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
 
-#[Icon('heroicons.outline.cog-8-tooth')]
 class SettingsResource extends ModelResource
 {
     protected string $model = Settings::class;

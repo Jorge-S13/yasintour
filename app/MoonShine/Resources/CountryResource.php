@@ -4,19 +4,15 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Models\Country;
-
-use MoonShine\Attributes\Icon;
-use MoonShine\Fields\File;
+use Illuminate\Database\Eloquent\Model;
+use MoonShine\Decorations\Block;
+use MoonShine\Fields\ID;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\Textarea;
 use MoonShine\Resources\ModelResource;
-use MoonShine\Decorations\Block;
-use MoonShine\Fields\ID;
 
-#[Icon('heroicons.outline.building-library')]
 class CountryResource extends ModelResource
 {
     protected string $model = Country::class;
@@ -33,13 +29,20 @@ class CountryResource extends ModelResource
                     ->showOnExport(),
                 Textarea::make(__('Info'), 'info')
                     ->required()
-                    ->showOnExport(),
+                    ->showOnExport()
+                    ->hideOnIndex(),
                 Text::make(__('Price'), 'price')
                     ->required()
                     ->showOnExport(),
-                File::make(__('Image'), 'img')
+                Textarea::make('Description', 'description')
                     ->required()
-                    ->multiple(),
+                    ->showOnExport(),
+                Image::make('Image', 'img')
+                    ->disk('public')
+                    ->dir('posts')
+                    ->showOnExport()
+                    ->allowedExtensions(['jpeg','jpg','png','svg','webp','tiff','bmp','gif'])
+                    ->hideOnIndex(),
             ]),
         ];
     }

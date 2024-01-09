@@ -28,27 +28,24 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
     protected function menu(): array
     {
         return [
-            MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [
-               MenuItem::make(
-                   static fn() => __('moonshine::ui.resource.admins_title'),
-                   new MoonShineUserResource()
-               ),
-               MenuItem::make(
-                   static fn() => __('moonshine::ui.resource.role_title'),
-                   new MoonShineUserRoleResource()
-               ),
-               MenuItem::make(
-                   static fn() => "Country",
-                   new CountryResource()
-               ),
-                MenuItem::make(
-                    static fn() => "Settings",
-                    new SettingsResource()
-                ),
-            ]),
+            MenuGroup::make('Страницы сайта',[
+                MenuItem::make('Главная', fn() => route('home')),
+                MenuItem::make('Страны', fn() => route('home')),
+                MenuItem::make('Горящие Туры', fn() => route('home')),
+                MenuItem::make('Авиакасса', fn() => route('home')),
+                MenuItem::make('Наши Услуги', fn() => route('home')),
+                MenuItem::make('О нас', fn() => route('home')),
+                MenuItem::make('Контакты', fn() => route('home')),
 
-            MenuItem::make('Documentation', 'https://moonshine-laravel.com')
-               ->badge(fn() => 'Check'),
+            ])->icon('heroicons.outline.document-duplicate'),
+
+            MenuItem::make( "Страны", new CountryResource())->icon('heroicons.outline.building-library'),
+            MenuItem::make( "Горящие Туры", fn() => route('home'))->icon('heroicons.outline.fire'),
+            MenuItem::make( "Авиакасса", fn() => route('home'))->icon('heroicons.outline.paper-airplane'),
+            MenuItem::make( "Наша Команда", fn() => route('home'))->icon('heroicons.outline.user-group'),
+            MenuItem::make( "Отзывы клиентов", fn() => route('home'))->icon('heroicons.outline.chat-bubble-bottom-center-text'),
+            MenuItem::make( "Настройки", new SettingsResource())->icon('heroicons.outline.cog-8-tooth'),
+            MenuItem::make('Сайт',  fn() => route('home'))->icon('heroicons.outline.globe-alt'),
         ];
     }
 

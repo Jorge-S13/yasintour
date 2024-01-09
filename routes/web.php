@@ -35,6 +35,8 @@ Route::get('/packages', function () {
     return view('pages.packages',compact('country'));
 })->name('packages');
 
+Route::get('/country/{id}',[\App\Http\Controllers\CountryController::class,'show'])->name('country.show');
+
 Route::get('/destination', function () {
     return view('pages.destination');
 })->name('destination');
