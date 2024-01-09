@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\MoonShine\Resources\CountryResource;
+use App\MoonShine\Resources\SettingsResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\MoonShine;
 use MoonShine\Menu\MenuGroup;
@@ -35,6 +37,14 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                    static fn() => __('moonshine::ui.resource.role_title'),
                    new MoonShineUserRoleResource()
                ),
+               MenuItem::make(
+                   static fn() => "Country",
+                   new CountryResource()
+               ),
+                MenuItem::make(
+                    static fn() => "Settings",
+                    new SettingsResource()
+                ),
             ]),
 
             MenuItem::make('Documentation', 'https://moonshine-laravel.com')
