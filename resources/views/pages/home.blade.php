@@ -198,7 +198,7 @@
                 <h1 class="mb-5"></h1>
             </div>
             <div class="row g-4 justify-content-center">
-                @foreach($country as $co)
+                @foreach(App\Models\Country::take(3)->orderBy('created_at')->get() as $co)
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="package-item">
                             <div class="overflow-hidden">
