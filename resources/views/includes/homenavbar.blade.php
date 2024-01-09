@@ -13,6 +13,7 @@
                 <a href="{{route('services')}}" class="nav-item nav-link {{ Route::is('services') ? 'active' : '' }}">Авиакасса</a>
                 <a href="{{route('packages')}}" class="nav-item nav-link {{ Route::is('info') ? 'active' : '' }}">Информация</a>
                 <a href="{{route('packages')}}" class="nav-item nav-link {{ Route::is('packages') ? 'active' : '' }}">Страны</a>
+                <a href="{{route('destination')}}" class="nav-item nav-link {{ Route::is('destination') ? 'active' : '' }}">Горящие Туры</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle {{ Route::currentRouteNamed('destination','booking','team','testimonial','404') ? 'active' : '' }}" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
