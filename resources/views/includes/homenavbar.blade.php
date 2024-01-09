@@ -11,8 +11,8 @@
             <div class="navbar-nav ms-auto py-0">
                 <a href="{{route('about')}}" class="nav-item nav-link {{ Route::is('about') ? 'active' : '' }}">О нас</a>
                 <a href="{{route('services')}}" class="nav-item nav-link {{ Route::is('services') ? 'active' : '' }}">Авиакасса</a>
-                <a href="{{route('packages')}}" class="nav-item nav-link {{ Route::is('packages') ? 'active' : '' }}">Информация</a>
-                <a href="{{route('packages')}}" class="nav-item nav-link {{ Route::is('packages') ? 'active' : '' }}">Контакты</a>
+                <a href="{{route('packages')}}" class="nav-item nav-link {{ Route::is('info') ? 'active' : '' }}">Информация</a>
+                <a href="{{route('packages')}}" class="nav-item nav-link {{ Route::is('packages') ? 'active' : '' }}">Страны</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle {{ Route::currentRouteNamed('destination','booking','team','testimonial','404') ? 'active' : '' }}" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
@@ -23,7 +23,7 @@
                         <a href="{{route('404')}}" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="{{route('contact')}}" class="nav-item nav-link {{ Route::is('contact') ? 'active' : '' }}">Contact</a>
+                <a href="{{route('contact')}}" class="nav-item nav-link {{ Route::is('contact') ? 'active' : '' }}">Контакты</a>
             </div>
         </div>
     </nav>
