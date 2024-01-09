@@ -12,7 +12,7 @@
 
   @include('includes.topbar')
 
-  @include('includes.homenavbar')
+  @include('includes.navbar')
 
 
 
@@ -31,30 +31,29 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
                     <h6 class="section-title bg-white text-start text-primary pe-3">О нас</h6>
                     <h1 class="mb-4">Добро пожаловать в <br> <span class="text-primary">Yasin Avia Travel</span></h1>
-                    <p class="mb-4">Мы всегда предлагаем вам захватывающие и захватывающие курорты</p>
-                    <p class="mb-4">С нами вы можете получить более приятное путешествие! Путешествуйте в любую точку мира с легкостью! Турция, США, Франция, Италия и другие страны... Кроме того, наша команда здесь для вас</p>
-                    {{--                    <div class="row gy-2 gx-4 mb-4">--}}
-                    {{--                        <div class="col-sm-6">--}}
-                    {{--                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>--}}
-                    {{--                        </div>--}}
-                    {{--                        <div class="col-sm-6">--}}
-                    {{--                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>--}}
-                    {{--                        </div>--}}
-                    {{--                        <div class="col-sm-6">--}}
-                    {{--                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>--}}
-                    {{--                        </div>--}}
-                    {{--                        <div class="col-sm-6">--}}
-                    {{--                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>--}}
-                    {{--                        </div>--}}
-                    {{--                        <div class="col-sm-6">--}}
-                    {{--                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours--}}
-                    {{--                            </p>--}}
-                    {{--                        </div>--}}
-                    {{--                        <div class="col-sm-6">--}}
-                    {{--                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="/contact">Начинать</a>
+                    <p class="mb-4">Мы турагентство, которое заботится о вашем путешествии с самого начала до самого конца.</p>
+                    <p class="mb-4">Присоединяйтесь к Yasin Avia Travel и откройте для себя мир возможностей, который ждет вас за границей!</p>
+                                        <div class="row gy-2 gx-4 mb-4">
+                                            <div class="col-sm-4">
+                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>
+                                            </div>
+{{--                                            <div class="col-sm-6">--}}
+{{--                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-sm-6">--}}
+{{--                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="col-sm-6">--}}
+{{--                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>--}}
+{{--                                            </div>--}}
+                                        </div>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="/contact">Начать</a>
                 </div>
             </div>
         </div>
@@ -220,7 +219,51 @@
             </div>
         </div>
         <!-- Package End -->
-
+        <!-- Process Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title bg-white text-center text-primary px-3">Процесс бронирования</h6>
+                    <h1 class="mb-5">3 простых шага</h1>
+                </div>
+                <div class="row gy-5 gx-4 justify-content-center">
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-globe fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4">Выберите направление</h5>
+                            <hr class="w-25 mx-auto bg-primary mb-1">
+                            <hr class="w-50 mx-auto bg-primary mt-0">
+                            <p class="mb-0">Погрузитесь в мир возможностей и выберите свое идеальное направление для путешествия. От прекрасных горизонтов до культурных столиц. Мы предлагаем широкий выбор направлений, чтобы каждый мог найти что-то особенное для себя.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-dollar-sign fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4">Заполните форму</h5>
+                            <hr class="w-25 mx-auto bg-primary mb-1">
+                            <hr class="w-50 mx-auto bg-primary mt-0">
+                            <p class="mb-0">Поделитесь вашими предпочтениями и датами вашего будущего путешествия. Заполните нашу форму бронирования, указав ваше имя, контактную информацию, дату предполагаемого отъезда и выбранное направление.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="position-relative border border-primary pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+                                <i class="fa fa-plane fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4">Ждите ответа оператора</h5>
+                            <hr class="w-25 mx-auto bg-primary mb-1">
+                            <hr class="w-50 mx-auto bg-primary mt-0">
+                            <p class="mb-0">Наши операторы свяжутся с вами в кратчайшие сроки после получения вашего запроса. Они уделят внимание каждой детали вашего предпочтения, чтобы предоставить вам оптимальные варианты для вашего путешествия.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Process Start -->
 
     <!-- Booking Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -228,52 +271,50 @@
             <div class="booking p-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-6 text-white">
-                        <h6 class="text-white text-uppercase">Booking</h6>
-                        <h1 class="text-white mb-4">Online Booking</h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a>
+                        <h6 class="text-white text-uppercase">Бронирование</h6>
+                        <h1 class="text-white mb-4">Бронирование онлайн</h1>
+                        <p class="mb-4">Добро пожаловать в форму бронирования! Мы готовы помочь сделать ваше путешествие незабываемым. Пожалуйста, укажите ваше имя, чтобы мы могли обращаться к вам лично, и адрес электронной почты для связи. Укажите также желаемую дату бронирования и направление вашего путешествия. Наша команда тщательно обработает ваш запрос, учтет все ваши предпочтения и постарается сделать ваше путешествие идеальным.</p>
                     </div>
                     <div class="col-md-6">
-                        <h1 class="text-white mb-4">Book A Tour</h1>
+                        <h1 class="text-white mb-4">Забронировать тур</h1>
                         <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        <label for="name">Имя</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <input type="tel" class="form-control bg-transparent" id="tel" placeholder="Phone Number">
+                                        <label for="tel">Номер телефона</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
                                         <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
+                                        <label for="datetime">Дата и время</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <select class="form-select bg-transparent" id="select1">
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 2</option>
-                                            <option value="3">Destination 3</option>
+                                            @foreach(App\Models\Country::all() as $co)
+                                            <option value="{{$co->name}}">{{$co->name}}</option>
+                                            @endforeach
                                         </select>
-                                        <label for="select1">Destination</label>
+                                        <label for="select1">Выберите направление</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
+                                        <label for="message">Пожелания</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-outline-light w-100 py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-outline-light w-100 py-3" type="submit">Оставить заявку</button>
                                 </div>
                             </div>
                         </form>
@@ -285,167 +326,120 @@
     <!-- Booking Start -->
 
 
-{{--    <!-- Process Start -->--}}
-{{--    <div class="container-xxl py-5">--}}
-{{--        <div class="container">--}}
-{{--            <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">--}}
-{{--                <h6 class="section-title bg-white text-center text-primary px-3">Process</h6>--}}
-{{--                <h1 class="mb-5">3 Easy Steps</h1>--}}
-{{--            </div>--}}
-{{--            <div class="row gy-5 gx-4 justify-content-center">--}}
-{{--                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">--}}
-{{--                    <div class="position-relative border border-primary pt-5 pb-4 px-4">--}}
-{{--                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">--}}
-{{--                            <i class="fa fa-globe fa-3x text-white"></i>--}}
-{{--                        </div>--}}
-{{--                        <h5 class="mt-4">Choose A Destination</h5>--}}
-{{--                        <hr class="w-25 mx-auto bg-primary mb-1">--}}
-{{--                        <hr class="w-50 mx-auto bg-primary mt-0">--}}
-{{--                        <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">--}}
-{{--                    <div class="position-relative border border-primary pt-5 pb-4 px-4">--}}
-{{--                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">--}}
-{{--                            <i class="fa fa-dollar-sign fa-3x text-white"></i>--}}
-{{--                        </div>--}}
-{{--                        <h5 class="mt-4">Pay Online</h5>--}}
-{{--                        <hr class="w-25 mx-auto bg-primary mb-1">--}}
-{{--                        <hr class="w-50 mx-auto bg-primary mt-0">--}}
-{{--                        <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">--}}
-{{--                    <div class="position-relative border border-primary pt-5 pb-4 px-4">--}}
-{{--                        <div class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">--}}
-{{--                            <i class="fa fa-plane fa-3x text-white"></i>--}}
-{{--                        </div>--}}
-{{--                        <h5 class="mt-4">Fly Today</h5>--}}
-{{--                        <hr class="w-25 mx-auto bg-primary mb-1">--}}
-{{--                        <hr class="w-50 mx-auto bg-primary mt-0">--}}
-{{--                        <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet lorem sit</p>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <!-- Process Start -->--}}
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Команда</h6>
+                <h1 class="mb-5">Наша команда</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="team-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                        </div>
+                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
 
 
-{{--    <!-- Team Start -->--}}
-{{--    <div class="container-xxl py-5">--}}
-{{--        <div class="container">--}}
-{{--            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">--}}
-{{--                <h6 class="section-title bg-white text-center text-primary px-3">Travel Guide</h6>--}}
-{{--                <h1 class="mb-5">Meet Our Guide</h1>--}}
-{{--            </div>--}}
-{{--            <div class="row g-4">--}}
-{{--                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">--}}
-{{--                    <div class="team-item">--}}
-{{--                        <div class="overflow-hidden">--}}
-{{--                            <img class="img-fluid" src="img/team-1.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>--}}
-{{--                        </div>--}}
-{{--                        <div class="text-center p-4">--}}
-{{--                            <h5 class="mb-0">Full Name</h5>--}}
-{{--                            <small>Designation</small>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">--}}
-{{--                    <div class="team-item">--}}
-{{--                        <div class="overflow-hidden">--}}
-{{--                            <img class="img-fluid" src="img/team-2.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>--}}
-{{--                        </div>--}}
-{{--                        <div class="text-center p-4">--}}
-{{--                            <h5 class="mb-0">Full Name</h5>--}}
-{{--                            <small>Designation</small>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">--}}
-{{--                    <div class="team-item">--}}
-{{--                        <div class="overflow-hidden">--}}
-{{--                            <img class="img-fluid" src="img/team-3.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>--}}
-{{--                        </div>--}}
-{{--                        <div class="text-center p-4">--}}
-{{--                            <h5 class="mb-0">Full Name</h5>--}}
-{{--                            <small>Designation</small>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">--}}
-{{--                    <div class="team-item">--}}
-{{--                        <div class="overflow-hidden">--}}
-{{--                            <img class="img-fluid" src="img/team-4.jpg" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="position-relative d-flex justify-content-center" style="margin-top: -19px;">--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>--}}
-{{--                            <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>--}}
-{{--                        </div>--}}
-{{--                        <div class="text-center p-4">--}}
-{{--                            <h5 class="mb-0">Full Name</h5>--}}
-{{--                            <small>Designation</small>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <!-- Team End -->--}}
-
-
-{{--    <!-- Testimonial Start -->--}}
-{{--    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">--}}
-{{--        <div class="container">--}}
-{{--            <div class="text-center">--}}
-{{--                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>--}}
-{{--                <h1 class="mb-5">Our Clients Say!!!</h1>--}}
-{{--            </div>--}}
-{{--            <div class="owl-carousel testimonial-carousel position-relative">--}}
-{{--                <div class="testimonial-item bg-white text-center border p-4">--}}
-{{--                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">--}}
-{{--                    <h5 class="mb-0">John Doe</h5>--}}
-{{--                    <p>New York, USA</p>--}}
-{{--                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>--}}
-{{--                </div>--}}
-{{--                <div class="testimonial-item bg-white text-center border p-4">--}}
-{{--                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">--}}
-{{--                    <h5 class="mb-0">John Doe</h5>--}}
-{{--                    <p>New York, USA</p>--}}
-{{--                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>--}}
-{{--                </div>--}}
-{{--                <div class="testimonial-item bg-white text-center border p-4">--}}
-{{--                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">--}}
-{{--                    <h5 class="mb-0">John Doe</h5>--}}
-{{--                    <p>New York, USA</p>--}}
-{{--                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>--}}
-{{--                </div>--}}
-{{--                <div class="testimonial-item bg-white text-center border p-4">--}}
-{{--                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">--}}
-{{--                    <h5 class="mb-0">John Doe</h5>--}}
-{{--                    <p>New York, USA</p>--}}
-{{--                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <!-- Testimonial End -->--}}
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="section-title bg-white text-center text-primary px-3">Отзывы</h6>
+                <h1 class="mb-5">Наши клиенты говорят!!!</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel position-relative">
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">John Doe</h5>
+                    <p>New York, USA</p>
+                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">John Doe</h5>
+                    <p>New York, USA</p>
+                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">John Doe</h5>
+                    <p>New York, USA</p>
+                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+                <div class="testimonial-item bg-white text-center border p-4">
+                    <img class="bg-white rounded-circle shadow p-1 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
+                    <h5 class="mb-0">John Doe</h5>
+                    <p>New York, USA</p>
+                    <p class="mt-2 mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
 
 
     @include('includes.footer')

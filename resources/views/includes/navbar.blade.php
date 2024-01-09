@@ -9,21 +9,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="{{route('about')}}" class="nav-item nav-link {{ Route::is('about') ? 'active' : '' }}">О нас</a>
-                <a href="{{route('services')}}" class="nav-item nav-link {{ Route::is('services') ? 'active' : '' }}">Авиакасса</a>
-                <a href="{{route('packages')}}" class="nav-item nav-link {{ Route::is('info') ? 'active' : '' }}">Информация</a>
+                <a href="{{route('home')}}" class="nav-item nav-link {{ Route::is('home') ? 'active' : '' }}">Главная</a>
                 <a href="{{route('packages')}}" class="nav-item nav-link {{ Route::is('packages') ? 'active' : '' }}">Страны</a>
                 <a href="{{route('destination')}}" class="nav-item nav-link {{ Route::is('destination') ? 'active' : '' }}">Горящие Туры</a>
-{{--                <div class="nav-item dropdown">--}}
-{{--                    <a href="#" class="nav-link dropdown-toggle {{ Route::currentRouteNamed('destination','booking','team','testimonial','404') ? 'active' : '' }}" data-bs-toggle="dropdown">Pages</a>--}}
-{{--                    <div class="dropdown-menu m-0">--}}
-{{--                        <a href="{{route('destination')}}" class="dropdown-item">Destination</a>--}}
-{{--                        <a href="{{route('booking')}}" class="dropdown-item">Booking</a>--}}
-{{--                        <a href="{{route('team')}}" class="dropdown-item">Travel Guides</a>--}}
-{{--                        <a href="{{route('testimonial')}}" class="dropdown-item">Testimonial</a>--}}
-{{--                        <a href="{{route('404')}}" class="dropdown-item">404 Page</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <a href="{{route('aviakassa')}}" class="nav-item nav-link {{ Route::is('aviakassa') ? 'active' : '' }}">Авиакасса</a>
+                <a href="{{route('services')}}" class="nav-item nav-link {{ Route::is('services') ? 'active' : '' }}">Наши услуги</a>
+                {{--                <div class="nav-item dropdown">--}}
+                {{--                    <a href="#" class="nav-link dropdown-toggle {{ Route::currentRouteNamed('destination','booking','team','testimonial','404') ? 'active' : '' }}" data-bs-toggle="dropdown">Pages</a>--}}
+                {{--                    <div class="dropdown-menu m-0">--}}
+                {{--                        <a href="{{route('destination')}}" class="dropdown-item">Destination</a>--}}
+                {{--                        <a href="{{route('booking')}}" class="dropdown-item">Booking</a>--}}
+                {{--                        <a href="{{route('team')}}" class="dropdown-item">Travel Guides</a>--}}
+                {{--                        <a href="{{route('testimonial')}}" class="dropdown-item">Testimonial</a>--}}
+                {{--                        <a href="{{route('404')}}" class="dropdown-item">404 Page</a>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
+                <a href="{{route('about')}}" class="nav-item nav-link {{ Route::is('about') ? 'active' : '' }}">О нас</a>
                 <a href="{{route('contact')}}" class="nav-item nav-link {{ Route::is('contact') ? 'active' : '' }}">Контакты</a>
             </div>
         </div>

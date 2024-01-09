@@ -76,7 +76,9 @@
     border-radius: 0px;
 }
 
-
+.navbar{
+    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7));
+}
 /*** Navbar ***/
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Nunito', sans-serif;
@@ -172,7 +174,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(../img/mainimg.jpg);
+    background: url(../img/mainimg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

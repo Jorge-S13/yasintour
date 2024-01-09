@@ -22,6 +22,10 @@ Route::get('/about', function () {
     return view('pages.about');
 })->name('about');
 
+Route::get('/aviakassa', function () {
+    return view('pages.aviakassa');
+})->name('aviakassa');
+
 Route::get('/services', function () {
     return view('pages.services');
 })->name('services');
