@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Country;
 
 use MoonShine\Attributes\Icon;
+use MoonShine\Fields\File;
+use MoonShine\Fields\Image;
 use MoonShine\Fields\Text;
+use MoonShine\Fields\Textarea;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
@@ -28,12 +31,15 @@ class CountryResource extends ModelResource
                 Text::make(__('Name'), 'name')
                     ->required()
                     ->showOnExport(),
-                Text::make(__('Info'), 'info')
+                Textarea::make(__('Info'), 'info')
                     ->required()
                     ->showOnExport(),
                 Text::make(__('Price'), 'price')
                     ->required()
                     ->showOnExport(),
+                File::make(__('Image'), 'img')
+                    ->required()
+                    ->multiple(),
             ]),
         ];
     }

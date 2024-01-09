@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Country;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +27,8 @@ Route::get('/services', function () {
 })->name('services');
 
 Route::get('/packages', function () {
-    return view('pages.packages');
+    $country = Country::all();
+    return view('pages.packages',compact('country'));
 })->name('packages');
 
 Route::get('/destination', function () {
