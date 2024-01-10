@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Contact;
 
+use MoonShine\Enums\PageType;
 use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
@@ -18,6 +19,7 @@ class ContactResource extends ModelResource
 
     protected string $title = 'Contact';
 
+    protected ?PageType $redirectAfterSave = PageType::INDEX;
     public function fields(): array
     {
         return [
@@ -42,5 +44,13 @@ class ContactResource extends ModelResource
     public function rules(Model $item): array
     {
         return [];
+    }
+    public function getActiveActions(): array
+    {
+        return ['view', 'update'];
+    }
+    protected function beforeCreating(Model $item): Model
+    {
+        return $item;
     }
 }

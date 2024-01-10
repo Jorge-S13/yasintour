@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Destination;
 
+use MoonShine\Enums\PageType;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\Textarea;
@@ -21,6 +22,7 @@ class DestinationResource extends ModelResource
 
     protected string $title = 'Destination';
 
+    protected ?PageType $redirectAfterSave = PageType::INDEX;
     public function fields(): array
     {
         return [

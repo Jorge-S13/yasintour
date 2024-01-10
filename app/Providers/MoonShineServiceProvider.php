@@ -33,6 +33,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
     protected function menu(): array
     {
         return [
+            MenuItem::make( "Заявки ", new ContactResource())->icon('heroicons.outline.device-phone-mobile'),
             MenuGroup::make('Страницы сайта',[
                 MenuItem::make('Главная', fn() => route('home')),
                 MenuItem::make('Страны', fn() => route('home')),
@@ -46,7 +47,6 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
 
             MenuItem::make( "Страны", new CountryResource())->icon('heroicons.outline.building-library'),
             MenuItem::make( "Горящие Туры", new DestinationResource())->icon('heroicons.outline.fire'),
-            MenuItem::make( "Контакт ", new ContactResource())->icon('heroicons.outline.device-phone-mobile'),
             MenuItem::make( "Авиакасса", new AviakassaResource())->icon('heroicons.outline.paper-airplane'),
             MenuItem::make( "Наша Команда", new TeamResource())->icon('heroicons.outline.user-group'),
             MenuItem::make( "Отзывы клиентов", new TestimonialResource())->icon('heroicons.outline.chat-bubble-bottom-center-text'),

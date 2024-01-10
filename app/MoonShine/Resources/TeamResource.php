@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Team;
 
+use MoonShine\Enums\PageType;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
@@ -19,6 +20,7 @@ class TeamResource extends ModelResource
 
     protected string $title = 'Teams';
 
+    protected ?PageType $redirectAfterSave = PageType::INDEX;
     public function fields(): array
     {
         return [

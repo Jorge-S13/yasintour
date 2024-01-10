@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Aviakassa;
 
+use MoonShine\Enums\PageType;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Phone;
 use MoonShine\Fields\Text;
@@ -20,6 +21,7 @@ class AviakassaResource extends ModelResource
 
     protected string $title = 'Aviakassas';
 
+    protected ?PageType $redirectAfterSave = PageType::INDEX;
     public function fields(): array
     {
         return [
