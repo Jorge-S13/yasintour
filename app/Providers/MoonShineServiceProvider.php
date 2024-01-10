@@ -8,6 +8,7 @@ use App\MoonShine\Resources\ContactResource;
 use App\MoonShine\Resources\CountryResource;
 use App\MoonShine\Resources\DestinationResource;
 use App\MoonShine\Resources\SettingsResource;
+use App\MoonShine\Resources\TestimonialResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\MoonShine;
 use MoonShine\Menu\MenuGroup;
@@ -46,7 +47,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             MenuItem::make( "Контакт ", new ContactResource())->icon('heroicons.outline.device-phone-mobile'),
             MenuItem::make( "Авиакасса", fn() => route('home'))->icon('heroicons.outline.paper-airplane'),
             MenuItem::make( "Наша Команда", fn() => route('home'))->icon('heroicons.outline.user-group'),
-            MenuItem::make( "Отзывы клиентов", fn() => route('home'))->icon('heroicons.outline.chat-bubble-bottom-center-text'),
+            MenuItem::make( "Отзывы клиентов", new TestimonialResource())->icon('heroicons.outline.chat-bubble-bottom-center-text'),
             MenuItem::make( "Настройки", new SettingsResource())->icon('heroicons.outline.cog-8-tooth'),
             MenuItem::make('Сайт',  fn() => route('home'))->icon('heroicons.outline.globe-alt'),
         ];

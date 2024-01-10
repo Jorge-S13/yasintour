@@ -1,3 +1,4 @@
+@php($settings = \App\Models\Settings::find(1))
 @extends('layouts.app')
 
 @section('content')
@@ -31,7 +32,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Офис</h5>
-                            <p class="mb-0">Sodiq Azimov ko'chasi 68, 100100, Тоshkent, Toshkent</p>
+                            <p class="mb-0">{{$settings->address}}</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-4">
@@ -40,7 +41,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Мобильный</h5>
-                            <p class="mb-0">+012 345 67890</p>
+                            <p class="mb-0"><a href="tel:{{$settings->phone_number}}" class="text-decoration-none text-reset">{{$settings->phone_number}}</a></p>
                         </div>
                     </div>
 {{--                    <div class="d-flex align-items-center">--}}

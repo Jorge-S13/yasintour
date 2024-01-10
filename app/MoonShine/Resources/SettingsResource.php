@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Settings;
 
 use MoonShine\Attributes\Icon;
+use MoonShine\Enums\PageType;
+use MoonShine\Fields\Phone;
 use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
@@ -18,6 +20,10 @@ class SettingsResource extends ModelResource
     protected string $model = Settings::class;
 
     protected string $title = 'Settings';
+
+    protected bool $editInModal = true;
+
+    protected ?PageType $redirectAfterSave = PageType::INDEX;
 
     public function fields(): array
     {
@@ -34,6 +40,12 @@ class SettingsResource extends ModelResource
                     Text::make(__('telegram_url'), 'telegram_url')
                         ->required()
                         ->showOnExport(),
+                    Phone::make('Phone', 'phone_number')
+                        ->required()
+                        ->showOnExport(),
+                    Text::make('Address', 'address')
+                        ->required()
+                        ->showOnExport(),
                 ]),
             ]),
         ];
@@ -47,5 +59,9 @@ class SettingsResource extends ModelResource
     public function actions(): array
     {
         return [];
+    }
+    public function getActiveActions(): array
+    {
+        return ['view', 'update'];
     }
 }
