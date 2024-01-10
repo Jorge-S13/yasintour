@@ -4,21 +4,22 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use App\Models\Country;
 use Illuminate\Database\Eloquent\Model;
-use MoonShine\Decorations\Block;
-use MoonShine\Fields\ID;
+use App\Models\Destination;
+
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\Textarea;
 use MoonShine\Fields\TinyMce;
 use MoonShine\Resources\ModelResource;
+use MoonShine\Decorations\Block;
+use MoonShine\Fields\ID;
 
-class CountryResource extends ModelResource
+class DestinationResource extends ModelResource
 {
-    protected string $model = Country::class;
+    protected string $model = Destination::class;
 
-    protected string $title = 'Countries';
+    protected string $title = 'Destination';
 
     public function fields(): array
     {
@@ -32,9 +33,6 @@ class CountryResource extends ModelResource
                     ->required()
                     ->showOnExport()
                     ->hideOnIndex(),
-                Text::make(__('Price'), 'price')
-                    ->required()
-                    ->showOnExport(),
                 Image::make('Image', 'img')
                     ->disk('public')
                     ->dir('posts')
@@ -47,6 +45,6 @@ class CountryResource extends ModelResource
 
     public function rules(Model $item): array
     {
-        return ['name','info','price'];
+        return ['name','info','img'];
     }
 }

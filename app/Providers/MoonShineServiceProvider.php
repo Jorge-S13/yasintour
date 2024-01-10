@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use App\MoonShine\Resources\CountryResource;
+use App\MoonShine\Resources\DestinationResource;
 use App\MoonShine\Resources\SettingsResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\MoonShine;
@@ -40,7 +41,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             ])->icon('heroicons.outline.document-duplicate'),
 
             MenuItem::make( "Страны", new CountryResource())->icon('heroicons.outline.building-library'),
-            MenuItem::make( "Горящие Туры", fn() => route('home'))->icon('heroicons.outline.fire'),
+            MenuItem::make( "Горящие Туры", new DestinationResource())->icon('heroicons.outline.fire'),
             MenuItem::make( "Авиакасса", fn() => route('home'))->icon('heroicons.outline.paper-airplane'),
             MenuItem::make( "Наша Команда", fn() => route('home'))->icon('heroicons.outline.user-group'),
             MenuItem::make( "Отзывы клиентов", fn() => route('home'))->icon('heroicons.outline.chat-bubble-bottom-center-text'),

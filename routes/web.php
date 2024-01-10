@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Country;
+use App\Models\Destination;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,7 +39,8 @@ Route::get('/packages', function () {
 Route::get('/country/{id}',[\App\Http\Controllers\CountryController::class,'show'])->name('country.show');
 
 Route::get('/destination', function () {
-    return view('pages.destination');
+    $destination = Destination::all();
+    return view('pages.destination',compact('destination'));
 })->name('destination');
 
 Route::get('/booking', function () {

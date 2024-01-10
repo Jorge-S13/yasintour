@@ -25,7 +25,7 @@
                     <br>
                     <img class="mx-auto d-block" src="{{asset('storage/' . $country->img)}}">
                     <br>
-                    {{$country->info}}
+                    {!! $country->info !!}
                 </div>
             </div>
         </div>
