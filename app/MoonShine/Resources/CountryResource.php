@@ -34,9 +34,6 @@ class CountryResource extends ModelResource
                 Text::make(__('Price'), 'price')
                     ->required()
                     ->showOnExport(),
-                Textarea::make('Description', 'description')
-                    ->required()
-                    ->showOnExport(),
                 Image::make('Image', 'img')
                     ->disk('public')
                     ->dir('posts')

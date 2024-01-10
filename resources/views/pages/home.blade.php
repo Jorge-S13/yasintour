@@ -33,26 +33,6 @@
                     <h1 class="mb-4">Добро пожаловать в <br> <span class="text-primary">Yasin Avia Travel</span></h1>
                     <p class="mb-4">Мы турагентство, которое заботится о вашем путешествии с самого начала до самого конца.</p>
                     <p class="mb-4">Присоединяйтесь к Yasin Avia Travel и откройте для себя мир возможностей, который ждет вас за границей!</p>
-                                        <div class="row gy-2 gx-4 mb-4">
-                                            <div class="col-sm-4">
-                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>
-                                            </div>
-{{--                                            <div class="col-sm-6">--}}
-{{--                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-sm-6">--}}
-{{--                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="col-sm-6">--}}
-{{--                                                <a href="#"><p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p></a>--}}
-{{--                                            </div>--}}
-                                        </div>
                     <a class="btn btn-primary py-3 px-5 mt-2" href="/contact">Начать</a>
                 </div>
             </div>
