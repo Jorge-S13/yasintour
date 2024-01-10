@@ -1,4 +1,4 @@
-@php($settings = \App\Models\Settings::find(1))
+
 @extends('layouts.app')
 
 @section('content')
@@ -24,39 +24,20 @@
                 <h1 class="mb-5">Наши авиакассы</h1>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/package-1.jpg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">Авиакасса Ташкент</h3> <br>
-                            <p>Контактный телефон:</p><i class="fa fa-phone-alt me-2"></i><a href="tel:{{$settings->phone_number}}" class="text-decoration-none text-reset">{{$settings->phone_number}}</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/package-1.jpg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">Авиакасса Самарканд</h3> <br>
-                            <p>Контактный телефон:</p><i class="fa fa-phone-alt me-2"></i><a href="tel:+012 345 6789" class="text-decoration-none text-reset">+012 345 6789</a>
+                @foreach(App\Models\Aviakassa::get() as $kassa)
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="package-item">
+                            <div class="overflow-hidden">
+                                <img class="img-fluid" src="{{asset('storage/' . $kassa->img)}}" alt="">
+                            </div>
+                            <div class="text-center p-4">
+                                <h3 class="mb-0">{{$kassa->name}}</h3> <br>
+                                <p>Контактный телефон:</p><i class="fa fa-phone-alt me-2"></i><a href="tel:{{$kassa->phone_number}}" class="text-decoration-none text-reset">{{$kassa->phone_number}}</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="package-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/package-1.jpg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h3 class="mb-0">Авиакасса Бухара</h3> <br>
-                            <p>Контактный телефон:</p><i class="fa fa-phone-alt me-2"></i><a href="tel:+012 345 6789" class="text-decoration-none text-reset">+012 345 6789</a>
-                        </div>
-                    </div>
-                </div>
+
+                @endforeach
             </div>
         </div>
     </div>
