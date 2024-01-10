@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\MoonShine\Resources\ContactResource;
 use App\MoonShine\Resources\CountryResource;
 use App\MoonShine\Resources\DestinationResource;
 use App\MoonShine\Resources\SettingsResource;
@@ -42,6 +43,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
 
             MenuItem::make( "Страны", new CountryResource())->icon('heroicons.outline.building-library'),
             MenuItem::make( "Горящие Туры", new DestinationResource())->icon('heroicons.outline.fire'),
+            MenuItem::make( "Контакт ", new ContactResource())->icon('heroicons.outline.device-phone-mobile'),
             MenuItem::make( "Авиакасса", fn() => route('home'))->icon('heroicons.outline.paper-airplane'),
             MenuItem::make( "Наша Команда", fn() => route('home'))->icon('heroicons.outline.user-group'),
             MenuItem::make( "Отзывы клиентов", fn() => route('home'))->icon('heroicons.outline.chat-bubble-bottom-center-text'),

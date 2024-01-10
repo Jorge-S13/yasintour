@@ -60,29 +60,35 @@
                             tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    @if(session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
+                    <form method="post" action="{{route('saveContact')}}">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Ваше имя">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Ваше имя">
                                     <label for="name">Ваше имя</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Электронной почты">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Электронной почты">
                                     <label for="email">Электронной почты</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="phone" placeholder="Телефон">
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Телефон">
                                     <label for="subject">Телефон</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Сообщение" id="message" style="height: 100px"></textarea>
+                                    <textarea class="form-control" placeholder="Сообщение" name="message" id="message" style="height: 100px"></textarea>
                                     <label for="message">Сообщение</label>
                                 </div>
                             </div>

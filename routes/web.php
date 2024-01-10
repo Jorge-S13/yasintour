@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Models\Country;
 use App\Models\Destination;
 use Illuminate\Support\Facades\Route;
@@ -62,3 +63,5 @@ Route::get('/404', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+Route::post('/contact/save', [ContactController::class,'save'])->name('saveContact');

@@ -59,39 +59,45 @@
                         </div>
                         <div class="col-md-6">
                             <h1 class="text-white mb-4">Забронировать тур</h1>
-                            <form>
+                            @if(session()->has('message'))
+                                <div class="alert alert-success">
+                                    {{ session()->get('message') }}
+                                </div>
+                            @endif
+                            <form method="post" action="{{route('saveContact')}}">
+                                @csrf
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control bg-transparent" name="name" id="name" placeholder="Your Name">
                                             <label for="name">Имя</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="tel" class="form-control bg-transparent" id="tel" placeholder="Phone Number">
+                                            <input type="tel" class="form-control bg-transparent" name="phone" id="phone" placeholder="Phone Number">
                                             <label for="tel">Номер телефона</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating date" id="date3" data-target-input="nearest">
-                                            <input type="text" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                            <input type="text" class="form-control bg-transparent datetimepicker-input" name="datetime" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
                                             <label for="datetime">Дата и время</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <select class="form-select bg-transparent" id="select1">
+                                            <select class="form-select bg-transparent" name="country" id="country">
                                                 @foreach(App\Models\Country::all() as $co)
                                                     <option value="{{$co->name}}">{{$co->name}}</option>
                                                 @endforeach
                                             </select>
-                                            <label for="select1">Выберите направление</label>
+                                            <label for="country">Выберите направление</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                            <textarea class="form-control bg-transparent" placeholder="Special Request" name="message" id="message" style="height: 100px"></textarea>
                                             <label for="message">Пожелания</label>
                                         </div>
                                     </div>
