@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Testimonial;
 
+use MoonShine\Enums\ClickAction;
 use MoonShine\Enums\PageType;
 use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
@@ -20,6 +21,7 @@ class TestimonialResource extends ModelResource
     protected string $title = 'Testimonials';
 
     protected ?PageType $redirectAfterSave = PageType::INDEX;
+    protected ?ClickAction $clickAction = ClickAction::EDIT;
 
     public function fields(): array
     {

@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
+use App\Enums\ContactStatusEnum;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Contact;
 
+use MoonShine\Enums\ClickAction;
 use MoonShine\Enums\PageType;
+use MoonShine\Fields\Enum;
+use MoonShine\Fields\Select;
 use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
@@ -19,6 +23,10 @@ class ContactResource extends ModelResource
 
     protected string $title = 'Contact';
 
+    protected bool $editInModal = true;
+
+    protected ?ClickAction $clickAction = ClickAction::EDIT;
+
     protected ?PageType $redirectAfterSave = PageType::INDEX;
     public function fields(): array
     {
@@ -26,17 +34,24 @@ class ContactResource extends ModelResource
             Block::make([
                 ID::make()->sortable(),
                 Text::make(__('Name'), 'name')
-                    ->required()
+                    ->showOnExport(),
+                Text::make(__('Country'), 'country')
                     ->showOnExport(),
                 Text::make(__('Email'), 'email')
-                    ->required()
                     ->showOnExport(),
                 Text::make(__('Phone'), 'phone')
-                    ->required()
                     ->showOnExport(),
                 Text::make(__('Message'), 'message')
-                    ->required()
                     ->showOnExport(),
+//                Select::make('Status', 'status')
+//                    ->options([
+//                        'New' => ContactStatusEnum::class,
+//                        'Closed' => ContactStatusEnum::CLOSED,
+//                        'Rejected' => ContactStatusEnum::REJECTED
+//                    ])
+//                    ->default('New'),
+                Enum::make('Status')
+                    ->attach(ContactStatusEnum::class)
             ]),
         ];
     }

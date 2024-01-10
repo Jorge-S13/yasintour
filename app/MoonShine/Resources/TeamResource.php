@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Team;
 
+use MoonShine\Enums\ClickAction;
 use MoonShine\Enums\PageType;
 use MoonShine\Fields\Image;
 use MoonShine\Fields\Text;
@@ -21,6 +22,7 @@ class TeamResource extends ModelResource
     protected string $title = 'Teams';
 
     protected ?PageType $redirectAfterSave = PageType::INDEX;
+    protected ?ClickAction $clickAction = ClickAction::EDIT;
     public function fields(): array
     {
         return [

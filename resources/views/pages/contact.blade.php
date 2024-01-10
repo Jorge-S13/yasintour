@@ -77,8 +77,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Электронной почты">
-                                    <label for="email">Электронной почты</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Электронная почта">
+                                    <label for="email">Электронная почта</label>
                                 </div>
                             </div>
                             <div class="col-12">

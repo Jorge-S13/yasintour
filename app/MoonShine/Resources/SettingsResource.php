@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Settings;
 
 use MoonShine\Attributes\Icon;
+use MoonShine\Enums\ClickAction;
 use MoonShine\Enums\PageType;
 use MoonShine\Fields\Phone;
 use MoonShine\Fields\Text;
@@ -24,6 +25,7 @@ class SettingsResource extends ModelResource
     protected bool $editInModal = true;
 
     protected ?PageType $redirectAfterSave = PageType::INDEX;
+    protected ?ClickAction $clickAction = ClickAction::EDIT;
 
     public function fields(): array
     {

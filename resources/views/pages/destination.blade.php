@@ -26,7 +26,7 @@
             <div class="row g-4" style="justify-content: space-around;">
                 @foreach ($destination as $de)
                 <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
+                    <a class="position-relative d-block h-100 overflow-hidden" href="{{route('destination.show',$de->id)}}">
                         <img class="img-fluid position-absolute w-100 h-100" src="{{asset('storage/' . $de->img)}}" alt="" style="object-fit: cover;">
                         <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">{{$de->name}}</div>
                     </a>

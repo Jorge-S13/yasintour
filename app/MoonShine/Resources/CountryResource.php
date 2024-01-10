@@ -7,6 +7,7 @@ namespace App\MoonShine\Resources;
 use App\Models\Country;
 use Illuminate\Database\Eloquent\Model;
 use MoonShine\Decorations\Block;
+use MoonShine\Enums\ClickAction;
 use MoonShine\Enums\PageType;
 use MoonShine\Fields\ID;
 use MoonShine\Fields\Image;
@@ -22,6 +23,7 @@ class CountryResource extends ModelResource
     protected string $title = 'Countries';
 
     protected ?PageType $redirectAfterSave = PageType::INDEX;
+    protected ?ClickAction $clickAction = ClickAction::EDIT;
     public function fields(): array
     {
         return [

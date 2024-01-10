@@ -11,6 +11,6 @@ class ContactController extends Controller
     public function save(ContactRequest $request)
     {
         Contact::create($request->all());
-        return redirect()->back()->with('message',"Собщения отправлено");
+        return redirect()->back()->with('message',"Спасибо за заявку");
     }
 }

@@ -38,6 +38,7 @@ Route::get('/packages', function () {
 })->name('packages');
 
 Route::get('/country/{id}',[\App\Http\Controllers\CountryController::class,'show'])->name('country.show');
+Route::get('/destination/{id}',[\App\Http\Controllers\DestinationController::class,'show'])->name('destination.show');
 
 Route::get('/destination', function () {
     $destination = Destination::all();

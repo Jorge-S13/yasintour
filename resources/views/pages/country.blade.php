@@ -20,16 +20,21 @@
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container text-center">
             <div class="row justify-content-center">
-                <div>
-                    <h3 class="mb-0">{{$country->name}}</h3>
-                    <br>
-                    <img class="mx-auto d-block" src="{{asset('storage/' . $country->img)}}">
-                    <br>
-                    {!! $country->info !!}
+                <div class="col-lg-8">
+                    <div class="position-relative">
+                        <h3 class="mb-0">{{$country->name}}</h3>
+                        <br>
+                        <img class="img-fluid" src="{{asset('storage/' . $country->img)}}" alt="{{$country->name}}">
+                    </div>
+                    <div class="mt-4">
+                        {!! $country->info !!}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
     <!-- 404 End -->
     <!-- Booking Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -72,9 +77,7 @@
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <select class="form-select bg-transparent" name="country" id="country">
-                                            @foreach(App\Models\Country::all() as $co)
-                                                <option value="{{$co->name}}">{{$co->name}}</option>
-                                            @endforeach
+                                                <option value="{{$country->name}}">{{$country->name}}</option>
                                         </select>
                                         <label for="country">Выберите направление</label>
                                     </div>
