@@ -14,14 +14,14 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar')
+    @include('includes.navbar',['navbarText' => $kassaPage->navbar_text])
 
     <!-- Package Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Авиакасса</h6>
-                <h1 class="mb-5">Наши авиакассы</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$kassaPage->aviakassa_h6}}</h6>
+                <h1 class="mb-5">{{$kassaPage->aviakassa_h1}}</h1>
             </div>
             <div class="row g-4 justify-content-center">
                 @foreach(App\Models\Aviakassa::get() as $kassa)
@@ -32,7 +32,7 @@
                             </div>
                             <div class="text-center p-4">
                                 <h3 class="mb-0">{{$kassa->name}}</h3> <br>
-                                <p>Контактный телефон:</p><i class="fa fa-phone-alt me-2"></i><a href="tel:{{$kassa->phone_number}}" class="text-decoration-none text-reset">{{$kassa->phone_number}}</a>
+                                <p>{{$kassaPage->contact_number}}</p><i class="fa fa-phone-alt me-2"></i><a href="tel:{{$kassa->phone_number}}" class="text-decoration-none text-reset">{{$kassa->phone_number}}</a>
                             </div>
                         </div>
                     </div>

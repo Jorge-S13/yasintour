@@ -17,24 +17,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('pages.home');
+    $process = \App\Models\MainPage::first();
+    return view('pages.home',compact('process'));
 })->name('home');
 
 Route::get('/about', function () {
-    return view('pages.about');
+    $aboutPage = \App\Models\AboutPage::first();
+    return view('pages.about',compact('aboutPage'));
 })->name('about');
 
 Route::get('/aviakassa', function () {
-    return view('pages.aviakassa');
+    $kassaPage = \App\Models\AviakassaPage::first();
+    return view('pages.aviakassa',compact('kassaPage'));
 })->name('aviakassa');
 
 Route::get('/services', function () {
-    return view('pages.services');
+    $servicesPage = \App\Models\ServicesPage::first();
+    return view('pages.services',compact(['servicesPage']));
 })->name('services');
 
 Route::get('/packages', function () {
     $country = Country::all();
-    return view('pages.packages',compact('country'));
+    $countryPage = \App\Models\CountryPage::first();
+    return view('pages.packages',compact('country','countryPage'));
 })->name('packages');
 
 Route::get('/country/{id}',[\App\Http\Controllers\CountryController::class,'show'])->name('country.show');
@@ -42,7 +47,8 @@ Route::get('/destination/{id}',[\App\Http\Controllers\DestinationController::cla
 
 Route::get('/destination', function () {
     $destination = Destination::all();
-    return view('pages.destination',compact('destination'));
+    $destinationPage = \App\Models\TourPage::first();
+    return view('pages.destination',compact('destination','destinationPage'));
 })->name('destination');
 
 Route::get('/booking', function () {

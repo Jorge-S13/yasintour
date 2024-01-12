@@ -21,37 +21,36 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/destination-2.jpg" alt=""
+                        <img class="img-fluid position-absolute w-100 h-100" src="{{asset('storage/' . $aboutPage->img)}}" alt=""
                              style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">О нас</h6>
-                    <h1 class="mb-4">Добро пожаловать в <br> <span class="text-primary">Yasin Avia Travel</span></h1>
-                    <p class="mb-4">Мы - команда энтузиастов, преданная идее помочь вам открыть для себя самые удивительные уголки мира. </p>
-                    <p class="mb-4">Наше турагентство уделяет особое внимание каждому клиенту, стремясь предоставить индивидуальный подход и высочайший уровень обслуживания.</p>
+                    <h6 class="section-title bg-white text-start text-primary pe-3">{{$aboutPage->about_h6}}</h6>
+                    <h1 class="mb-4">{{$aboutPage->about_h1}}<br> <span class="text-primary">{{$aboutPage->about_span}}</span></h1>
+                    <p class="mb-4">{{$aboutPage->about_main_p1}}</p>
+                    <p class="mb-4">{{$aboutPage->about_main_p2}}</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Путешествия по миру</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{$aboutPage->about_p1}}</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Помощь в оформлении документов</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{$aboutPage->about_p2}}</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Бронирование отелей и трансферы</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{$aboutPage->about_p3}}</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Отдых семьей</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{$aboutPage->about_p4}}</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Индивидуальное планирование
-                            </p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{$aboutPage->about_p5}}</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Круглосуточное обслуживание</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>{{$aboutPage->about_p6}}</p>
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="/contact">Начать</a>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="/contact">{{$aboutPage->button}}</a>
                 </div>
             </div>
         </div>
@@ -63,8 +62,8 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Команда</h6>
-                <h1 class="mb-5">Наша команда</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$aboutPage->team_h6}}</h6>
+                <h1 class="mb-5">{{$aboutPage->team_h1}}</h1>
             </div>
             <div class="row g-4">
                 @foreach(App\Models\Team::take(3)->orderBy('created_at')->get() as $team)

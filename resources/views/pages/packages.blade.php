@@ -13,13 +13,13 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar')
+    @include('includes.navbar',['navbarText' => $countryPage->navbar_text])
 
     <!-- Package Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Страны</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$countryPage->country_h6}}</h6>
                 <h1 class="mb-5"></h1>
             </div>
             <div class="row g-4 justify-content-center">
@@ -36,7 +36,7 @@
                                 <h3 class="mb-0">{{$co->price}}</h3>
                                 <p>{{$co->description}}</p>
                                 <div class="d-flex justify-content-center mb-2">
-                                    <a href="{{route('country.show',$co->id)}}" class="btn btn-sm btn-primary px-3 border-end">Читать далее</a>
+                                    <a href="{{route('country.show',$co->id)}}" class="btn btn-sm btn-primary px-3 border-end">{{$countryPage->button}}</a>
                                 </div>
                             </div>
                         </div>

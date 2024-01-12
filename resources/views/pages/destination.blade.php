@@ -13,15 +13,15 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar')
+    @include('includes.navbar',['navbarText' => $destinationPage->navbar_text])
 
 
     <!-- Destination Start -->
     <div class="container-xxl py-5 destination">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Направление</h6>
-                <h1 class="mb-5">Популярное направление</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$destinationPage->tour_h6}}</h6>
+                <h1 class="mb-5">{{$destinationPage->tour_h1}}</h1>
             </div>
             <div class="row g-4" style="justify-content: space-around;">
                 @foreach ($destination as $de)
