@@ -32,6 +32,9 @@ class CountryResource extends ModelResource
                 Text::make(__('Name'), 'name')
                     ->required()
                     ->showOnExport(),
+                Text::make(__('Description'), 'description')
+                    ->required()
+                    ->showOnExport(),
                 TinyMce::make(__('Info'), 'info')
                     ->required()
                     ->showOnExport()
