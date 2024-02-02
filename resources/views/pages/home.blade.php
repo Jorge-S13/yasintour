@@ -24,7 +24,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="{{asset('storage/' . $aboutPage->img) ?? '#'}}" alt=""
+                        <img class="img-fluid position-absolute w-100 h-100" src="{{asset('storage/' . $aboutPage->img ?? '#')}}" alt=""
                              style="object-fit: cover;">
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                 @foreach (\App\Models\Destination::all() as $de)
                     <div class="col-lg-12 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
                         <a class="position-relative d-block h-100 overflow-hidden" href="{{route('destination.show', $de->id)}}">
-                            <img class="img-fluid position-absolute w-100 h-100" src="{{asset('storage/' . $de->img) ?? '#'}}" alt="" style="object-fit: cover;">
+                            <img class="img-fluid position-absolute w-100 h-100" src="{{asset('storage/' . $de->img ?? '#')}}" alt="" style="object-fit: cover;">
                             <div class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">{{$de->name ?? ''}}</div>
                         </a>
                     </div>
@@ -161,7 +161,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="package-item">
                             <div class="overflow-hidden">
-                                <img class="img-fluid" src="{{asset('storage/' . $co->img) ?? '#'}}" alt="">
+                                <img class="img-fluid" src="{{asset('storage/' . $co->img ?? '#')}}" alt="">
                             </div>
                             <div class="d-flex border-bottom">
                                 <h3 class="flex-fill text-center border-end py-2"><i class="fa fa-map-marker-alt text-primary me-2"></i>{{$co->name ?? ''}}</h3>
@@ -310,7 +310,7 @@
                     <div class="{{$result}}" data-wow-delay="0.1s">
                         <div class="team-item">
                             <div class="overflow-hidden">
-                                <img class="img-fluid" src="{{asset('storage/' . $team->img) ?? '#'}}" alt="">
+                                <img class="img-fluid" src="{{asset('storage/' . $team->img  ?? '#')}}" alt="">
                             </div>
                             <div class="text-center p-4">
                                 <h5 class="mb-0">{{$team->name ?? ''}}</h5>
