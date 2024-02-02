@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -33,7 +33,6 @@
 </head>
 
 <body>
-
 @yield('content')
 
 <!-- JavaScript Libraries -->

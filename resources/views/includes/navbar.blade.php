@@ -34,8 +34,9 @@
         <div class="container py-5">
             <div class="row justify-content-center py-5">
                 <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                    @include('partials/language_switcher')
 {{--                    <h1 class="display-3 text-white mb-3 animated slideInDown">{{$navbarText}}</h1>--}}
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">123</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">{{ __('Welcome to our website!') }}</h1>
                 </div>
             </div>
         </div>
