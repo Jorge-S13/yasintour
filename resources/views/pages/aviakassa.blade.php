@@ -14,7 +14,7 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar',['navbarText' => $kassaPage->navbar_text])
+    @include('includes.navbar',['navbarText' => $kassaPage->navbar_text ?? ''])
 
     <!-- Package Start -->
     <div class="container-xxl py-5">

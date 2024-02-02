@@ -12,7 +12,7 @@
 
   @include('includes.topbar')
 
-  @include('includes.navbar', ['navbarText' => $process->navbar_text])
+  @include('includes.navbar', ['navbarText' => $process->navbar_text ?? ''])
 
 
 

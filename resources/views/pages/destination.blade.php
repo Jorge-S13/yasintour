@@ -13,7 +13,7 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar',['navbarText' => $destinationPage->navbar_text])
+    @include('includes.navbar',['navbarText' => $destinationPage->navbar_text ?? ''])
 
 
     <!-- Destination Start -->

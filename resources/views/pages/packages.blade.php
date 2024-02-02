@@ -13,7 +13,7 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar',['navbarText' => $countryPage->navbar_text])
+    @include('includes.navbar',['navbarText' => $countryPage->navbar_text ?? ''])
 
     <!-- Package Start -->
     <div class="container-xxl py-5">

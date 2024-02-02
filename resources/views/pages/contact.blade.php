@@ -14,7 +14,7 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar',['navbarText' => $contactPage->navbar_text])
+    @include('includes.navbar',['navbarText' => $contactPage->navbar_text ?? ''])
 
 
     <!-- Contact Start -->

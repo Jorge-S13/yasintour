@@ -13,7 +13,7 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar',['navbarText' => $aboutPage->navbar_text])
+    @include('includes.navbar',['navbarText' => $aboutPage->navbar_text ?? ''])
 
     <!-- About Start -->
     <div class="container-xxl py-5">
