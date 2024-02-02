@@ -11,6 +11,7 @@ use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
+use VI\MoonShineSpatieTranslatable\Fields\Translatable;
 
 class CountryPageResource extends ModelResource
 {
@@ -23,9 +24,9 @@ class CountryPageResource extends ModelResource
         return [
             Block::make([
                 ID::make()->sortable(),
-                Text::make('Navbar Text', 'navbar_text'),
-                Text::make('Country h6','country_h6'),
-                Text::make('Button Text','button'),
+                Translatable::make('Navbar Text', 'navbar_text')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
+                Translatable::make('Country h6','country_h6')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
+                Translatable::make('Button Text','button')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
             ]),
         ];
     }
