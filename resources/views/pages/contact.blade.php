@@ -71,30 +71,30 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Ваше имя">
-                                    <label for="name">Ваше имя</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="{{$contactForm->name}}">
+                                    <label for="name">{{$contactForm->name}}</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Электронная почта">
-                                    <label for="email">Электронная почта</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="{{$contactForm->email}}">
+                                    <label for="email">{{$contactForm->email}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Телефон">
-                                    <label for="subject">Телефон</label>
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="{{$contactForm->phone}}">
+                                    <label for="subject">{{$contactForm->phone}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Сообщение" name="message" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Сообщение</label>
+                                    <textarea class="form-control" placeholder="{{$contactForm->description}}" name="message" id="message" style="height: 100px"></textarea>
+                                    <label for="message">{{$contactForm->description}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Отправить сообщение</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">{{$contactForm->button}}</button>
                             </div>
                         </div>
                     </form>

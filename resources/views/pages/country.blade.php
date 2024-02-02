@@ -42,12 +42,12 @@
             <div class="booking p-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-6 text-white">
-                        <h6 class="text-white text-uppercase">Бронирование</h6>
-                        <h1 class="text-white mb-4">Бронирование онлайн</h1>
-                        <p class="mb-4">Добро пожаловать в форму бронирования! Мы готовы помочь сделать ваше путешествие незабываемым. Пожалуйста, укажите ваше имя, чтобы мы могли обращаться к вам лично, и адрес электронной почты для связи. Укажите также желаемую дату бронирования и направление вашего путешествия. Наша команда тщательно обработает ваш запрос, учтет все ваши предпочтения и постарается сделать ваше путешествие идеальным.</p>
+                        <h6 class="text-white text-uppercase">{{$mainForm->form_h6}}</h6>
+                        <h1 class="text-white mb-4">{{$mainForm->form_text_h1}}</h1>
+                        <p class="mb-4">{{$mainForm->form_p}}</p>
                     </div>
                     <div class="col-md-6">
-                        <h1 class="text-white mb-4">Забронировать тур</h1>
+                        <h1 class="text-white mb-4">{{$mainForm->form_h1}}</h1>
                         @if(session()->has('message'))
                             <div class="alert alert-success">
                                 {{ session()->get('message') }}
@@ -58,38 +58,40 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" name="name" id="name" placeholder="Your Name">
-                                        <label for="name">Имя</label>
+                                        <input type="text" class="form-control bg-transparent" name="name" id="name" placeholder="{{$mainForm->name}}">
+                                        <label for="name">{{$mainForm->name}}</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control bg-transparent" name="phone" id="phone" placeholder="Phone Number">
-                                        <label for="tel">Номер телефона</label>
+                                        <input type="tel" class="form-control bg-transparent" name="phone" id="phone" placeholder="{{$mainForm->phone}}">
+                                        <label for="tel">{{$mainForm->phone}}</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input" name="datetime" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                        <label for="datetime">Дата и время</label>
+                                        <input type="text" class="form-control bg-transparent datetimepicker-input" name="datetime" id="datetime" placeholder="{{$mainForm->date}}" data-target="#date3" data-toggle="datetimepicker" />
+                                        <label for="datetime">{{$mainForm->date}}</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <select class="form-select bg-transparent" name="country" id="country">
-                                                <option value="{{$country->name}}">{{$country->name}}</option>
+                                            @foreach(App\Models\Country::all() as $co)
+                                                <option value="{{$co->name}}">{{$co->name}}</option>
+                                            @endforeach
                                         </select>
-                                        <label for="country">Выберите направление</label>
+                                        <label for="country">{{$mainForm->country}}</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Special Request" name="message" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Пожелания</label>
+                                        <textarea class="form-control bg-transparent" placeholder="{{$mainForm->description}}" name="message" id="message" style="height: 100px"></textarea>
+                                        <label for="message">{{$mainForm->description}}</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-outline-light w-100 py-3" type="submit">Оставить заявку</button>
+                                    <button class="btn btn-outline-light w-100 py-3" type="submit">{{$mainForm->button}}</button>
                                 </div>
                             </div>
                         </form>

@@ -8,12 +8,16 @@ use App\Models\Contact;
 use App\MoonShine\Resources\AboutPageResource;
 use App\MoonShine\Resources\AviakassaPageResource;
 use App\MoonShine\Resources\AviakassaResource;
+use App\MoonShine\Resources\ContactFormResource;
 use App\MoonShine\Resources\ContactPageResource;
 use App\MoonShine\Resources\ContactResource;
 use App\MoonShine\Resources\CountryPageResource;
 use App\MoonShine\Resources\CountryResource;
 use App\MoonShine\Resources\DestinationResource;
+use App\MoonShine\Resources\FooterResource;
+use App\MoonShine\Resources\MainFormResource;
 use App\MoonShine\Resources\MainPageResource;
+use App\MoonShine\Resources\NavbarResource;
 use App\MoonShine\Resources\ServicesPageResource;
 use App\MoonShine\Resources\SettingsResource;
 use App\MoonShine\Resources\TeamResource;
@@ -52,6 +56,10 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                 MenuItem::make('Наши Услуги', new ServicesPageResource()),
                 MenuItem::make('О нас', new AboutPageResource()),
                 MenuItem::make('Контакты', new ContactPageResource()),
+                MenuItem::make('Главная Форма', new MainFormResource()),
+                MenuItem::make('Форма Контактов', new ContactFormResource()),
+                MenuItem::make('Navbar', new NavbarResource()),
+                MenuItem::make('Footer', new FooterResource()),
             ])->icon('heroicons.outline.document-text'),
 
 

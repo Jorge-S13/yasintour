@@ -27,12 +27,14 @@ Route::get('/', function () {
     $servicesPage = \App\Models\ServicesPage::first();
     $countryPage = \App\Models\CountryPage::first();
     $destinationPage = \App\Models\TourPage::first();
+    $mainForm = \App\Models\MainForm::first();
     return view('pages.home',compact(
         'process',
         'aboutPage',
         'servicesPage',
         'countryPage',
         'destinationPage',
+        'mainForm',
     ));
 })->name('home')->middleware('localization');
 
@@ -51,16 +53,18 @@ Route::get('/services', function () {
     return view('pages.services',compact(['servicesPage']));
 })->name('services')->middleware('localization');
 
-Route::get('/packages', function () {
+Route::get('/countries', function () {
     $country = Country::all();
     $countryPage = \App\Models\CountryPage::first();
-    return view('pages.packages',compact('country','countryPage'));
+    $mainForm = \App\Models\MainForm::first();
+    return view('pages.packages',compact('country','countryPage','mainForm'));
 })->name('packages')->middleware('localization');
+
 
 Route::get('/country/{id}',[\App\Http\Controllers\CountryController::class,'show'])->name('country.show')->middleware('localization');
 Route::get('/destination/{id}',[\App\Http\Controllers\DestinationController::class,'show'])->name('destination.show')->middleware('localization');
 
-Route::get('/destination', function () {
+Route::get('/tours', function () {
     $destination = Destination::all();
     $destinationPage = \App\Models\TourPage::first();
     return view('pages.destination',compact('destination','destinationPage'));
@@ -84,7 +88,8 @@ Route::get('/404', function () {
 
 Route::get('/contact', function () {
     $contactPage = \App\Models\ContactPage::first();
-    return view('pages.contact',compact('contactPage'));
+    $contactForm = \App\Models\ContactForm::first();
+    return view('pages.contact',compact('contactPage','contactForm'));
 })->name('contact')->middleware('localization');
 
 Route::post('/contact/save', [ContactController::class,'save'])->name('saveContact');

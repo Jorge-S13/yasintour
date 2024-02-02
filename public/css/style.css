@@ -22,7 +22,27 @@
     z-index: 99;
 }
 
+.language-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #992463;
 
+    transition: background-color 0.3s ease;
+}
+
+.language-link:hover {
+    background-color: #cc1c7c;
+    color: #fff;
+    text-decoration: none;
+}
+.active-locale {
+    font-weight: bold;
+    color: #fff;
+}
 /*** Spinner ***/
 #spinner {
     opacity: 0;
