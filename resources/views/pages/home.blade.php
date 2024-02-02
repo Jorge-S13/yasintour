@@ -24,8 +24,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
                     <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="{{asset('storage/' . $aboutPage->img ?? '#')}}" alt=""
-                             style="object-fit: cover;">
+                        <img class="img-fluid position-absolute w-100 h-100" src="{{ asset('storage/' . ($aboutPage->img ?? '#')) }}" alt="" style="object-fit: cover;">
+
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -310,7 +310,7 @@
                     <div class="{{$result}}" data-wow-delay="0.1s">
                         <div class="team-item">
                             <div class="overflow-hidden">
-                                <img class="img-fluid" src="{{asset('storage/' . $team->img  ?? '#')}}" alt="">
+                                <img class="img-fluid" src="{{$team ? asset('storage/' . $team->img) : '#'}}" alt="">
                             </div>
                             <div class="text-center p-4">
                                 <h5 class="mb-0">{{$team->name ?? ''}}</h5>
