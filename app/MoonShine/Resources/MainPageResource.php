@@ -32,6 +32,8 @@ class MainPageResource extends ModelResource
                 Text::make('Process item2 p','process_item2_p'),
                 Text::make('Process item3 h5','process_item3_h5'),
                 Text::make('Process item3 p','process_item3_p'),
+                Text::make('Feedback h6','feedback_h6'),
+                Text::make('Feedback h1','feedback_h1'),
 
             ]),
         ];

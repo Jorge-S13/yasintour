@@ -14,15 +14,15 @@
 
     @include('includes.topbar')
 
-    @include('includes.navbar')
+    @include('includes.navbar',['navbarText' => $contactPage->navbar_text])
 
 
     <!-- Contact Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Контакт</h6>
-                <h1 class="mb-5">Контакт для любого запроса</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$contactPage->contact_h6}}</h6>
+                <h1 class="mb-5">{{$contactPage->contact_h1}}</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -31,7 +31,7 @@
                             <i class="fa fa-map-marker-alt text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-primary">Офис</h5>
+                            <h5 class="text-primary">{{$contactPage->contact_h5_office}}</h5>
                             <p class="mb-0">{{$settings->address}}</p>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-primary">Мобильный</h5>
+                            <h5 class="text-primary">{{$contactPage->contact_h5_phone}}</h5>
                             <p class="mb-0"><a href="tel:{{$settings->phone_number}}" class="text-decoration-none text-reset">{{$settings->phone_number}}</a></p>
                         </div>
                     </div>

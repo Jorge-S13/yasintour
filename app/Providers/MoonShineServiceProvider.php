@@ -8,6 +8,7 @@ use App\Models\Contact;
 use App\MoonShine\Resources\AboutPageResource;
 use App\MoonShine\Resources\AviakassaPageResource;
 use App\MoonShine\Resources\AviakassaResource;
+use App\MoonShine\Resources\ContactPageResource;
 use App\MoonShine\Resources\ContactResource;
 use App\MoonShine\Resources\CountryPageResource;
 use App\MoonShine\Resources\CountryResource;
@@ -50,7 +51,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                 MenuItem::make('Авиакасса', new AviakassaPageResource()),
                 MenuItem::make('Наши Услуги', new ServicesPageResource()),
                 MenuItem::make('О нас', new AboutPageResource()),
-                MenuItem::make('Контакты', fn() => route('home')),
+                MenuItem::make('Контакты', new ContactPageResource()),
             ])->icon('heroicons.outline.document-text'),
 
 

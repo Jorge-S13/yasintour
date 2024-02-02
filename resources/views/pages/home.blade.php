@@ -29,11 +29,11 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">О нас</h6>
-                    <h1 class="mb-4">Добро пожаловать в <br> <span class="text-primary">Yasin Avia Travel</span></h1>
-                    <p class="mb-4">Мы турагентство, которое заботится о вашем путешествии с самого начала до самого конца.</p>
-                    <p class="mb-4">Присоединяйтесь к Yasin Avia Travel и откройте для себя мир возможностей, который ждет вас за границей!</p>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="/contact">Начать</a>
+                    <h6 class="section-title bg-white text-start text-primary pe-3">{{$aboutPage->about_h6}}</h6>
+                    <h1 class="mb-4">{{$aboutPage->about_h1}} <br> <span class="text-primary">{{$aboutPage->about_span}}</span></h1>
+                    <p class="mb-4">{{$aboutPage->about_main_p1}}</p>
+                    <p class="mb-4">{{$aboutPage->about_main_p2}}</p>
+                    <a class="btn btn-primary py-3 px-5 mt-2" href="/contact">{{$aboutPage->button}}</a>
                 </div>
             </div>
         </div>
@@ -45,79 +45,79 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Услуги</h6>
-                <h1 class="mb-5">Наши услуги</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$servicesPage->services_h6}}</h6>
+                <h1 class="mb-5">{{$servicesPage->services_h1}}</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>Путешествия по миру</h5>
-                            <p>Изысканные туры по всему миру, включая экзотические места и культурные путешествия, созданные специально для вас.</p>
+                            <i class="fa fa-3x fa-chevron-down text-primary mb-4"></i>
+                            <h5>{{$servicesPage->item1_h5}}</h5>
+                            <p>{{$servicesPage->item1_p}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Помощь в оформлении документов</h5>
-                            <p>Консультации и помощь в оформлении необходимых документов для путешествий: визы, страховки и другая документация.</p>
+                            <i class="fa fa-3x fa-chevron-down text-primary mb-4"></i>
+                            <h5>{{$servicesPage->item2_h5}}</h5>
+                            <p>{{$servicesPage->item2_p}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Бронирование отелей и трансферы</h5>
-                            <p>Помощь в выборе лучших отелей по всему миру и организация комфортных трансферов для вашего удобства.</p>
+                            <i class="fa fa-3x fa-chevron-down text-primary mb-4"></i>
+                            <h5>{{$servicesPage->item3_h5}}</h5>
+                            <p>{{$servicesPage->item3_p}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Отдых семьей</h5>
-                            <p>Специальные предложения и пакеты для отдыха семьей: от детских программ до разнообразных развлечений для каждого члена семьи.</p>
+                            <i class="fa fa-3x fa-chevron-down text-primary mb-4"></i>
+                            <h5>{{$servicesPage->item4_h5}}</h5>
+                            <p>{{$servicesPage->item4_p}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>Индивидуальное планирование</h5>
-                            <p>Персональный подход к каждому клиенту: создание индивидуальных маршрутов и организация поездок с учетом ваших пожеланий.</p>
+                            <i class="fa fa-3x fa-chevron-down text-primary mb-4"></i>
+                            <h5>{{$servicesPage->item5_h5}}</h5>
+                            <p>{{$servicesPage->item5_p}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Консультации по путешествиям и туристическим направлениям</h5>
-                            <p>Наши эксперты всегда готовы поделиться знаниями и советами по различным туристическим направлениям, помогая выбрать идеальное место для вашего отпуска или путешествия.</p>
+                            <i class="fa fa-3x fa-chevron-down text-primary mb-4"></i>
+                            <h5>{{$servicesPage->item6_h5}}</h5>
+                            <p>{{$servicesPage->item6_p}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Создание историй, а не просто путешествий</h5>
-                            <p>Мы не просто организовываем поездки — мы помогаем вам создавать неповторимые истории, наполненные впечатлениями, эмоциями и неожиданными открытиями.</p>
+                            <i class="fa fa-3x fa-chevron-down text-primary mb-4"></i>
+                            <h5>{{$servicesPage->item7_h5}}</h5>
+                            <p>{{$servicesPage->item7_p}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="service-item rounded pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Эмоциональное погружение в культуру</h5>
-                            <p>Мы создаем не просто путешествия, а возможность глубоко погрузиться в местную культуру и атмосферу. Откройте для себя новые эмоции, вкусы и впечатления, погружаясь в уникальные аспекты каждого места.</p>
+                            <i class="fa fa-3x fa-chevron-down text-primary mb-4"></i>
+                            <h5>{{$servicesPage->item8_h5}}</h5>
+                            <p>{{$servicesPage->item8_p}}</p>
                         </div>
                     </div>
                 </div>
@@ -131,8 +131,8 @@
     <div class="container-xxl py-5 destination">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Туры</h6>
-                <h1 class="mb-5">Популярные туры</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$destinationPage->tour_h6}}</h6>
+                <h1 class="mb-5">{{$destinationPage->tour_h1}}</h1>
             </div>
             <div class="row g-3">
                 @foreach (\App\Models\Destination::all() as $de)
@@ -153,7 +153,7 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Страны</h6>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$countryPage->country_h6}}</h6>
                 <h1 class="mb-5"></h1>
             </div>
             <div class="row g-4 justify-content-center">
@@ -296,8 +296,8 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Команда</h6>
-                <h1 class="mb-5">Наша команда</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$aboutPage->team_h6}}</h6>
+                <h1 class="mb-5">{{$aboutPage->team_h1}}</h1>
             </div>
             <div class="row g-4">
                 @foreach(App\Models\Team::take(3)->orderBy('created_at')->get() as $team)
@@ -329,8 +329,8 @@
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Отзывы</h6>
-                <h1 class="mb-5">Наши клиенты говорят!!!</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$process->feedback_h6}}</h6>
+                <h1 class="mb-5">{{$process->feedback_h1}}</h1>
             </div>
             <div class="owl-carousel testimonial-carousel position-relative">
                 @foreach(App\Models\Testimonial::take(4)->orderBy('created_at')->get() as $testimonial)

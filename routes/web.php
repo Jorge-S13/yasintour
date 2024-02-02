@@ -23,7 +23,17 @@ Route::get('language/{locale}', function ($locale) {
 });
 Route::get('/', function () {
     $process = \App\Models\MainPage::first();
-    return view('pages.home',compact('process'));
+    $aboutPage = \App\Models\AboutPage::first();
+    $servicesPage = \App\Models\ServicesPage::first();
+    $countryPage = \App\Models\CountryPage::first();
+    $destinationPage = \App\Models\TourPage::first();
+    return view('pages.home',compact(
+        'process',
+        'aboutPage',
+        'servicesPage',
+        'countryPage',
+        'destinationPage',
+    ));
 })->name('home')->middleware('localization');
 
 Route::get('/about', function () {
@@ -73,7 +83,8 @@ Route::get('/404', function () {
 })->name('404')->middleware('localization');
 
 Route::get('/contact', function () {
-    return view('pages.contact');
+    $contactPage = \App\Models\ContactPage::first();
+    return view('pages.contact',compact('contactPage'));
 })->name('contact')->middleware('localization');
 
 Route::post('/contact/save', [ContactController::class,'save'])->name('saveContact');
