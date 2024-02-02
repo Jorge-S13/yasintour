@@ -11,6 +11,7 @@ use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
+use VI\MoonShineSpatieTranslatable\Fields\Translatable;
 
 class ContactPageResource extends ModelResource
 {
@@ -23,9 +24,9 @@ class ContactPageResource extends ModelResource
         return [
             Block::make([
                 ID::make()->sortable(),
-                Text::make('Navbar Text', 'navbar_text'),
-                Text::make('Contact h6','contact_h6'),
-                Text::make('Contact h1','contact_h1'),
+                Translatable::make('Navbar Text', 'navbar_text')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
+                Translatable::make('Contact h6','contact_h6')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
+                Translatable::make('Contact h1','contact_h1')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
                 Text::make('Contact Office Text','contact_h5_office'),
                 Text::make('Contact Number Text','contact_h5_phone'),
             ]),
