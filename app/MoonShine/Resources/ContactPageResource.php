@@ -27,8 +27,8 @@ class ContactPageResource extends ModelResource
                 Translatable::make('Navbar Text', 'navbar_text')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
                 Translatable::make('Contact h6','contact_h6')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
                 Translatable::make('Contact h1','contact_h1')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
-                Text::make('Contact Office Text','contact_h5_office'),
-                Text::make('Contact Number Text','contact_h5_phone'),
+                Translatable::make('Contact Office Text','contact_h5_office')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
+                Translatable::make('Contact Number Text','contact_h5_phone')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
             ]),
         ];
     }
