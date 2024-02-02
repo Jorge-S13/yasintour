@@ -21,8 +21,8 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">{{$contactPage->contact_h6}}</h6>
-                <h1 class="mb-5">{{$contactPage->contact_h1}}</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">{{$contactPage->contact_h6 ?? ''}}</h6>
+                <h1 class="mb-5">{{$contactPage->contact_h1 ?? ''}}</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -31,8 +31,8 @@
                             <i class="fa fa-map-marker-alt text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-primary">{{$contactPage->contact_h5_office}}</h5>
-                            <p class="mb-0">{{$settings->address}}</p>
+                            <h5 class="text-primary">{{$contactPage->contact_h5_office ?? ''}}</h5>
+                            <p class="mb-0">{{$settings->address ?? ''}}</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-4">
@@ -40,8 +40,8 @@
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ms-3">
-                            <h5 class="text-primary">{{$contactPage->contact_h5_phone}}</h5>
-                            <p class="mb-0"><a href="tel:{{$settings->phone_number}}" class="text-decoration-none text-reset">{{$settings->phone_number}}</a></p>
+                            <h5 class="text-primary">{{$contactPage->contact_h5_phone ?? ''}}</h5>
+                            <p class="mb-0"><a href="tel:{{$settings->phone_number ?? ''}}" class="text-decoration-none text-reset">{{$settings->phone_number ?? ''}}</a></p>
                         </div>
                     </div>
 {{--                    <div class="d-flex align-items-center">--}}
@@ -71,30 +71,30 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="{{$contactForm->name}}">
-                                    <label for="name">{{$contactForm->name}}</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="{{$contactForm->name ?? ''}}">
+                                    <label for="name">{{$contactForm->name ?? ''}}</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="{{$contactForm->email}}">
-                                    <label for="email">{{$contactForm->email}}</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="{{$contactForm->email ?? ''}}">
+                                    <label for="email">{{$contactForm->email ?? ''}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="{{$contactForm->phone}}">
-                                    <label for="subject">{{$contactForm->phone}}</label>
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="{{$contactForm->phone ?? ''}}">
+                                    <label for="subject">{{$contactForm->phone ?? ''}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="{{$contactForm->description}}" name="message" id="message" style="height: 100px"></textarea>
-                                    <label for="message">{{$contactForm->description}}</label>
+                                    <textarea class="form-control" placeholder="{{$contactForm->description ?? ''}}" name="message" id="message" style="height: 100px"></textarea>
+                                    <label for="message">{{$contactForm->description ?? ''}}</label>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">{{$contactForm->button}}</button>
+                                <button class="btn btn-primary w-100 py-3" type="submit">{{$contactForm->button ?? ''}}</button>
                             </div>
                         </div>
                     </form>
