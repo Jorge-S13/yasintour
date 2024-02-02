@@ -11,6 +11,7 @@ use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
+use VI\MoonShineSpatieTranslatable\Fields\Translatable;
 
 class TourPageResource extends ModelResource
 {
@@ -23,9 +24,9 @@ class TourPageResource extends ModelResource
         return [
             Block::make([
                 ID::make()->sortable(),
-                Text::make('Navbar Text', 'navbar_text'),
-                Text::make('Tour h6','tour_h6'),
-                Text::make('Tour h1','tour_h1'),
+                Translatable::make('Navbar Text', 'navbar_text')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
+                Translatable::make('Tour h6','tour_h6')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
+                Translatable::make('Tour h1','tour_h1')->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en']),
             ]),
         ];
     }
