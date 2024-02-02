@@ -9,10 +9,10 @@ return new class extends Migration {
     {
         Schema::create('aviakassa_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('navbar_text');
-            $table->string('aviakassa_h6');
-            $table->string('aviakassa_h1');
-            $table->string('contact_number');
+            $table->longText('navbar_text')->nullable();
+            $table->longText('aviakassa_h6')->nullable();
+            $table->longText('aviakassa_h1')->nullable();
+            $table->longText('contact_number')->nullable();
             $table->timestamps();
         });
     }

@@ -9,25 +9,25 @@ return new class extends Migration {
     {
         Schema::create('services_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('navbar_text');
-            $table->string('services_h6');
-            $table->string('services_h1');
-            $table->string('item1_h5');
-            $table->string('item1_p');
-            $table->string('item2_h5');
-            $table->string('item2_p');
-            $table->string('item3_h5');
-            $table->string('item3_p');
-            $table->string('item4_h5');
-            $table->string('item4_p');
-            $table->string('item5_h5');
-            $table->string('item5_p');
-            $table->string('item6_h5');
-            $table->string('item6_p');
-            $table->string('item7_h5');
-            $table->string('item7_p');
-            $table->string('item8_h5');
-            $table->string('item8_p');
+            $table->longText('navbar_text')->nullable();
+            $table->longText('services_h6')->nullable();
+            $table->longText('services_h1')->nullable();
+            $table->longText('item1_h5')->nullable();
+            $table->longText('item1_p')->nullable();
+            $table->longText('item2_h5')->nullable();
+            $table->longText('item2_p')->nullable();
+            $table->longText('item3_h5')->nullable();
+            $table->longText('item3_p')->nullable();
+            $table->longText('item4_h5')->nullable();
+            $table->longText('item4_p')->nullable();
+            $table->longText('item5_h5')->nullable();
+            $table->longText('item5_p')->nullable();
+            $table->longText('item6_h5')->nullable();
+            $table->longText('item6_p')->nullable();
+            $table->longText('item7_h5')->nullable();
+            $table->longText('item7_p')->nullable();
+            $table->longText('item8_h5')->nullable();
+            $table->longText('item8_p')->nullable();
             $table->timestamps();
         });
     }

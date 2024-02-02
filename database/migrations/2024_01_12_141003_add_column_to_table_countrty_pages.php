@@ -8,7 +8,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('country_pages', function (Blueprint $table) {
-            $table->string('button');
+            $table->longText('button')->nullable();
         });
     }
 

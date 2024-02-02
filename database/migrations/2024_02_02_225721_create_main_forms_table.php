@@ -9,16 +9,16 @@ return new class extends Migration {
     {
         Schema::create('main_forms', function (Blueprint $table) {
             $table->id();
-            $table->longText('form_h6');
-            $table->longText('form_text_h1');
-            $table->longText('form_p');
-            $table->longText('form_h1');
-            $table->longText('name');
-            $table->longText('phone');
-            $table->longText('date');
-            $table->longText('country');
-            $table->longText('description');
-            $table->longText('button');
+            $table->longText('form_h6')->nullable();
+            $table->longText('form_text_h1')->nullable();
+            $table->longText('form_p')->nullable();
+            $table->longText('form_h1')->nullable();
+            $table->longText('name')->nullable();
+            $table->longText('phone')->nullable();
+            $table->longText('date')->nullable();
+            $table->longText('country')->nullable();
+            $table->longText('description')->nullable();
+            $table->longText('button')->nullable();
             $table->timestamps();
         });
     }

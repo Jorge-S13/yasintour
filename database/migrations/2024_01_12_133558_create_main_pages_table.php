@@ -9,15 +9,15 @@ return new class extends Migration {
     {
         Schema::create('main_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('navbar_text');
-            $table->string('process_h6');
-            $table->string('process_h1');
-            $table->string('process_item1_h5');
-            $table->string('process_item1_p');
-            $table->string('process_item2_h5');
-            $table->string('process_item2_p');
-            $table->string('process_item3_h5');
-            $table->string('process_item3_p');
+            $table->longText('navbar_text')->nullable();
+            $table->longText('process_h6')->nullable();
+            $table->longText('process_h1')->nullable();
+            $table->longText('process_item1_h5')->nullable();
+            $table->longText('process_item1_p')->nullable();
+            $table->longText('process_item2_h5')->nullable();
+            $table->longText('process_item2_p')->nullable();
+            $table->longText('process_item3_h5')->nullable();
+            $table->longText('process_item3_p')->nullable();
             $table->timestamps();
         });
     }

@@ -9,9 +9,9 @@ return new class extends Migration {
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->id();
-            $table->longText('about');
-            $table->longText('contact');
-            $table->longText('information');
+            $table->longText('about')->nullable();
+            $table->longText('contact')->nullable();
+            $table->longText('information')->nullable();
             $table->timestamps();
         });
     }

@@ -9,11 +9,11 @@ return new class extends Migration {
     {
         Schema::create('contact_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('navbar_text');
-            $table->string('contact_h6');
-            $table->string('contact_h1');
-            $table->string('contact_h5_office');
-            $table->string('contact_h5_phone');
+            $table->longText('navbar_text')->nullable();
+            $table->longText('contact_h6')->nullable();
+            $table->longText('contact_h1')->nullable();
+            $table->longText('contact_h5_office')->nullable();
+            $table->longText('contact_h5_phone')->nullable();
             $table->timestamps();
         });
     }

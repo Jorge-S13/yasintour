@@ -9,9 +9,9 @@ return new class extends Migration {
     {
         Schema::create('tour_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('navbar_text');
-            $table->string('tour_h6');
-            $table->string('tour_h1');
+            $table->longText('navbar_text')->nullable();
+            $table->longText('tour_h6')->nullable();
+            $table->longText('tour_h1')->nullable();
             $table->timestamps();
         });
     }

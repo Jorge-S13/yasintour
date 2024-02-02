@@ -9,8 +9,8 @@ return new class extends Migration {
     {
         Schema::create('country_pages', function (Blueprint $table) {
             $table->id();
-            $table->string('navbar_text');
-            $table->string('country_h6');
+            $table->longText('navbar_text')->nullable();
+            $table->longText('country_h6')->nullable();
             $table->timestamps();
         });
     }

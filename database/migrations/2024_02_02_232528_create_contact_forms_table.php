@@ -9,11 +9,11 @@ return new class extends Migration {
     {
         Schema::create('contact_forms', function (Blueprint $table) {
             $table->id();
-            $table->longText('name');
-            $table->longText('email');
-            $table->longText('phone');
-            $table->longText('description');
-            $table->longText('button');
+            $table->longText('name')->nullable();
+            $table->longText('email')->nullable();
+            $table->longText('phone')->nullable();
+            $table->longText('description')->nullable();
+            $table->longText('button')->nullable();
             $table->timestamps();
         });
     }

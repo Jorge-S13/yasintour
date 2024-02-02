@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('main_pages', function (Blueprint $table) {
-            $table->string('feedback_h6');
-            $table->string('feedback_h1');
+            $table->longText('feedback_h6')->nullable();
+            $table->longText('feedback_h1')->nullable();
         });
     }
 
