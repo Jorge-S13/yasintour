@@ -61,11 +61,11 @@
                             tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    @if(session()->has('message'))
-                        <div class="alert alert-success">
-                            {{ session()->get('message') }}
-                        </div>
-                    @endif
+{{--                    @if(session()->has('message'))--}}
+{{--                        <div class="alert alert-success">--}}
+{{--                            {{ session()->get('message') }}--}}
+{{--                        </div>--}}
+{{--                    @endif--}}
                     <form method="post" action="{{route('saveContact')}}">
                         @csrf
                         <div class="row g-3">

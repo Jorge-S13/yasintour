@@ -27,7 +27,7 @@ class ContactController extends Controller
         file_get_contents($url);
 
         Contact::create($request->all());
-        return redirect()->back()->with('message',"Спасибо за заявку");
+        return redirect()->back()->with('message',"Ваш запрос успешно получен. Наши операторы свяжутся с вами в ближайшее время.");
     }
 //    public function store(PageMessageRequest $request)
 //    {
