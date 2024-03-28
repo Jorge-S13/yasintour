@@ -37,6 +37,21 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('img/favicon_io/favicon-16x16.png')}}">
     <link rel="manifest" href="{{asset('img/favicon_io/site.webmanifest')}}">
 </head>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Yasin Avia Travel",
+  "image": "https://yasintour.uz/img/yasinlogo.png",
+  "telephone": "+998501006080",
+  "email": "yasintour2024@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sodiq Azimov ko'chasi 68, 100100, Тоshkent, Toshkent"
+  }
+  "url": "https://yasintour.uz/"
+}
+</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSNN1NXCQJ"></script>
 <script>
