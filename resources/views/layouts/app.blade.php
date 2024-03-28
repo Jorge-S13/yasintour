@@ -30,6 +30,12 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('img/favicon_io/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('img/favicon_io/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('img/favicon_io/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{asset('img/favicon_io/site.webmanifest')}}">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSNN1NXCQJ"></script>
