@@ -16,6 +16,7 @@ use MoonShine\Fields\TinyMce;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
+use VI\MoonShineSpatieTranslatable\Fields\Translatable;
 
 class DestinationResource extends ModelResource
 {
@@ -30,13 +31,16 @@ class DestinationResource extends ModelResource
         return [
             Block::make('', [
                 ID::make()->sortable()->showOnExport(),
-                Text::make(__('Name'), 'name')
-                    ->required()
-                    ->showOnExport(),
-                TinyMce::make(__('Info'), 'info')
-                    ->required()
+                Translatable::make('Name', 'name')
+                    ->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en'])
                     ->showOnExport()
-                    ->hideOnIndex(),
+                    ->required(),
+                Translatable::make('Info', 'info')
+                    ->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en'])
+                    ->tinyMce()
+                    ->showOnExport()
+                    ->hideOnIndex()
+                    ->required(),
                 Image::make('Image', 'img')
                     ->disk('public')
                     ->dir('posts')

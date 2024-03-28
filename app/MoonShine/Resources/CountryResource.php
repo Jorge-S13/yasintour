@@ -15,6 +15,7 @@ use MoonShine\Fields\Text;
 use MoonShine\Fields\Textarea;
 use MoonShine\Fields\TinyMce;
 use MoonShine\Resources\ModelResource;
+use VI\MoonShineSpatieTranslatable\Fields\Translatable;
 
 class CountryResource extends ModelResource
 {
@@ -29,16 +30,16 @@ class CountryResource extends ModelResource
         return [
             Block::make('', [
                 ID::make()->sortable()->showOnExport(),
-                Text::make(__('Name'), 'name')
-                    ->required()
-                    ->showOnExport(),
-                Text::make(__('Description'), 'description')
-                    ->required()
-                    ->showOnExport(),
-                TinyMce::make(__('Info'), 'info')
-                    ->required()
+                Translatable::make('Name', 'name')
+                    ->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en'])->showOnExport()->required(),
+                Translatable::make('Description', 'description')
+                    ->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en'])->showOnExport()->required(),
+                Translatable::make('Info', 'info')
+                    ->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en'])
+                    ->tinyMce()
                     ->showOnExport()
-                    ->hideOnIndex(),
+                    ->hideOnIndex()
+                    ->required(),
                 Text::make(__('Price'), 'price')
                     ->required()
                     ->showOnExport(),

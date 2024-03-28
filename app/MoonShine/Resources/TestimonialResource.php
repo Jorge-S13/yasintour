@@ -13,6 +13,7 @@ use MoonShine\Fields\Text;
 use MoonShine\Resources\ModelResource;
 use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
+use VI\MoonShineSpatieTranslatable\Fields\Translatable;
 
 class TestimonialResource extends ModelResource
 {
@@ -28,15 +29,18 @@ class TestimonialResource extends ModelResource
         return [
             Block::make([
                 ID::make()->sortable()->showOnExport(),
-                Text::make('Name')
-                    ->required()
-                    ->showOnExport(),
-                Text::make('City')
-                    ->required()
-                    ->showOnExport(),
-                Text::make('Text')
-                    ->required()
-                    ->showOnExport(),
+                Translatable::make('Name', 'name')
+                    ->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en'])
+                    ->showOnExport()
+                    ->required(),
+                Translatable::make('City', 'city')
+                    ->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en'])
+                    ->showOnExport()
+                    ->required(),
+                Translatable::make('Text', 'text')
+                    ->requiredLanguages([config('app.fallback_locale'), 'uz', 'ru', 'en'])
+                    ->showOnExport()
+                    ->required(),
             ]),
         ];
     }
