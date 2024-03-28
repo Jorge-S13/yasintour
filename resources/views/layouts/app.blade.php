@@ -48,7 +48,7 @@
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Sodiq Azimov ko'chasi 68, 100100, Тоshkent, Toshkent"
-  }
+  },
   "url": "https://yasintour.uz/"
 }
 </script>
