@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Yasin avia travel</title>
+    <title>Турагентство Узбекистана - Yasin avia travel</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Откройте для себя великолепие Узбекистана с нашим турагентством! Мы специализируемся на внутреннем и внешнем туризме, гарантируем лояльное отношение к каждому клиенту и предлагаем доступные цены." name="description">
 
     <!-- Favicon -->
     <link href="{{asset('img/favicon.ico')}}" rel="icon">
