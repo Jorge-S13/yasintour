@@ -3,7 +3,7 @@
         @if($available_locale === $current_locale)
             <span class="ml-2 mr-2 text-gray-700 active-locale">{{ $locale_name }}</span>
         @else
-            <a class="language-link" href="language/{{ $available_locale }}">
+            <a class="language-link" href="/language/{{ $available_locale }}">
                 <span>{{ $locale_name }}</span>
             </a>
         @endif
