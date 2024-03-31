@@ -22,28 +22,30 @@ Route::get('language/{locale}', function ($locale) {
     session()->put('locale', $locale);
     return redirect()->back();
 });
-Route::get('/', MainController::class)->name('home')->middleware('localization');
+Route::middleware('localization')->group(function(){
+    Route::get('/', MainController::class)->name('home');
 
-Route::get('/about', [MainController::class,'about'])->name('about')->middleware('localization');
+    Route::get('/about', [MainController::class,'about'])->name('about');
 
-Route::get('/aviakassa', [MainController::class,'aviakassa'])->name('aviakassa')->middleware('localization');
+    Route::get('/aviakassa', [MainController::class,'aviakassa'])->name('aviakassa');
 
-Route::get('/services', [MainController::class,'services'])->name('services')->middleware('localization');
+    Route::get('/services', [MainController::class,'services'])->name('services');
 
-Route::get('/countries', [MainController::class,'countries'])->name('packages')->middleware('localization');
+    Route::get('/countries', [MainController::class,'countries'])->name('packages');
 
 
-Route::get('/country/{id}',[\App\Http\Controllers\CountryController::class,'show'])->name('country.show')->middleware('localization');
-Route::get('/destination/{id}',[\App\Http\Controllers\DestinationController::class,'show'])->name('destination.show')->middleware('localization');
+    Route::get('/country/{id}',[\App\Http\Controllers\CountryController::class,'show'])->name('country.show');
+    Route::get('/destination/{id}',[\App\Http\Controllers\DestinationController::class,'show'])->name('destination.show');
 
-Route::get('/tours', [MainController::class,'tours'])->name('destination')->middleware('localization');
+    Route::get('/tours', [MainController::class,'tours'])->name('destination');
 
-Route::get('/booking', [MainController::class,'booking'])->name('booking')->middleware('localization');
+    Route::get('/booking', [MainController::class,'booking'])->name('booking');
 
-Route::get('/team', [MainController::class,'team'])->name('team')->middleware('localization');
+    Route::get('/team', [MainController::class,'team'])->name('team');
 
-Route::get('/testimonial', [MainController::class,'testimonial'])->name('testimonial')->middleware('localization');
+    Route::get('/testimonial', [MainController::class,'testimonial'])->name('testimonial');
 
-Route::get('/contact', [MainController::class,'contact'])->name('contact')->middleware('localization');
+    Route::get('/contact', [MainController::class,'contact'])->name('contact');
+});
 
 Route::post('/contact/save', [ContactController::class,'save'])->name('saveContact');
