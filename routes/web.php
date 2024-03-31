@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MainController;
 use App\Models\Country;
 use App\Models\Destination;
 use Illuminate\Support\Facades\Route;
@@ -21,75 +22,30 @@ Route::get('language/{locale}', function ($locale) {
     session()->put('locale', $locale);
     return redirect()->back();
 });
-Route::get('/', function () {
-    $process = \App\Models\MainPage::first();
-    $aboutPage = \App\Models\AboutPage::first();
-    $servicesPage = \App\Models\ServicesPage::first();
-    $countryPage = \App\Models\CountryPage::first();
-    $destinationPage = \App\Models\TourPage::first();
-    $mainForm = \App\Models\MainForm::first();
-    return view('pages.home',compact(
-        'process',
-        'aboutPage',
-        'servicesPage',
-        'countryPage',
-        'destinationPage',
-        'mainForm',
-    ));
-})->name('home')->middleware('localization');
+Route::get('/', MainController::class)->name('home')->middleware('localization');
 
-Route::get('/about', function () {
-    $aboutPage = \App\Models\AboutPage::first();
-    return view('pages.about',compact('aboutPage'));
-})->name('about')->middleware('localization');
+Route::get('/about', [MainController::class,'about'])->name('about')->middleware('localization');
 
-Route::get('/aviakassa', function () {
-    $kassaPage = \App\Models\AviakassaPage::first();
-    return view('pages.aviakassa',compact('kassaPage'));
-})->name('aviakassa')->middleware('localization');
+Route::get('/aviakassa', [MainController::class,'aviakassa'])->name('aviakassa')->middleware('localization');
 
-Route::get('/services', function () {
-    $servicesPage = \App\Models\ServicesPage::first();
-    return view('pages.services',compact(['servicesPage']));
-})->name('services')->middleware('localization');
+Route::get('/services', [MainController::class,'services'])->name('services')->middleware('localization');
 
-Route::get('/countries', function () {
-    $country = Country::all();
-    $countryPage = \App\Models\CountryPage::first();
-    $mainForm = \App\Models\MainForm::first();
-    return view('pages.packages',compact('country','countryPage','mainForm'));
-})->name('packages')->middleware('localization');
+Route::get('/countries', [MainController::class,'countries'])->name('packages')->middleware('localization');
 
 
 Route::get('/country/{id}',[\App\Http\Controllers\CountryController::class,'show'])->name('country.show')->middleware('localization');
 Route::get('/destination/{id}',[\App\Http\Controllers\DestinationController::class,'show'])->name('destination.show')->middleware('localization');
 
-Route::get('/tours', function () {
-    $destination = Destination::all();
-    $destinationPage = \App\Models\TourPage::first();
-    return view('pages.destination',compact('destination','destinationPage'));
-})->name('destination')->middleware('localization');
+Route::get('/tours', [MainController::class,'tours'])->name('destination')->middleware('localization');
 
-Route::get('/booking', function () {
-    return view('pages.booking');
-})->name('booking')->middleware('localization');
+Route::get('/booking', [MainController::class,'booking'])->name('booking')->middleware('localization');
 
-Route::get('/team', function () {
-    return view('pages.team');
-})->name('team')->middleware('localization');
+Route::get('/team', [MainController::class,'team'])->name('team')->middleware('localization');
 
-Route::get('/testimonial', function () {
-    return view('pages.testimonial');
-})->name('testimonial')->middleware('localization');
+Route::get('/testimonial', [MainController::class,'testimonial'])->name('testimonial')->middleware('localization');
 
-Route::get('/404', function () {
-    return view('pages.404');
-})->name('404')->middleware('localization');
+Route::get('/404', [MainController::class,'page404'])->name('404')->middleware('localization');
 
-Route::get('/contact', function () {
-    $contactPage = \App\Models\ContactPage::first();
-    $contactForm = \App\Models\ContactForm::first();
-    return view('pages.contact',compact('contactPage','contactForm'));
-})->name('contact')->middleware('localization');
+Route::get('/contact', [MainController::class,'contact'])->name('contact')->middleware('localization');
 
 Route::post('/contact/save', [ContactController::class,'save'])->name('saveContact');
