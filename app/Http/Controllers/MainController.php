@@ -11,25 +11,42 @@ use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
+    private object $process;
+    private object $aboutPage;
+    private object $servicesPage;
+    private object $countryPage;
+    private object $destinationPage;
+    private object $mainForm;
+    private object $kassaPage;
+    private object $contactPage;
+    private object $contactForm;
+
+    public function __construct()
+    {
+        $this->process = \App\Models\MainPage::first();
+        $this->aboutPage = \App\Models\AboutPage::first();
+        $this->servicesPage = \App\Models\ServicesPage::first();
+        $this->countryPage = \App\Models\CountryPage::first();
+        $this->destinationPage = \App\Models\TourPage::first();
+        $this->mainForm = \App\Models\MainForm::first();
+        $this->kassaPage = \App\Models\AviakassaPage::first();
+        $this->contactPage = \App\Models\ContactPage::first();
+        $this->contactForm = \App\Models\ContactForm::first();
+    }
     /**
      * @return Application|Factory|View|\Illuminate\Foundation\Application|\Illuminate\View\View
      */
     public function __invoke()
     {
-        $process = \App\Models\MainPage::first();
-        $aboutPage = \App\Models\AboutPage::first();
-        $servicesPage = \App\Models\ServicesPage::first();
-        $countryPage = \App\Models\CountryPage::first();
-        $destinationPage = \App\Models\TourPage::first();
-        $mainForm = \App\Models\MainForm::first();
-        return view('pages.home',compact(
-            'process',
-            'aboutPage',
-            'servicesPage',
-            'countryPage',
-            'destinationPage',
-            'mainForm',
-        ));
+
+        return view('pages.home',[
+            'process' => $this->process,
+            'aboutPage' => $this->aboutPage,
+            'servicesPage' => $this->servicesPage,
+            'countryPage' => $this->countryPage,
+            'destinationPage' => $this->destinationPage,
+            'mainForm' => $this->mainForm,
+        ]);
     }
 
     /**
@@ -37,8 +54,7 @@ class MainController extends Controller
      */
     public function about()
     {
-        $aboutPage = \App\Models\AboutPage::first();
-        return view('pages.about',compact('aboutPage'));
+        return view('pages.about',['aboutPage' => $this->aboutPage]);
     }
 
     /**
@@ -46,8 +62,7 @@ class MainController extends Controller
      */
     public function aviakassa()
     {
-        $kassaPage = \App\Models\AviakassaPage::first();
-        return view('pages.aviakassa',compact('kassaPage'));
+        return view('pages.aviakassa',['kassaPage' => $this->kassaPage]);
     }
 
     /**
@@ -55,8 +70,7 @@ class MainController extends Controller
      */
     public function services()
     {
-        $servicesPage = \App\Models\ServicesPage::first();
-        return view('pages.services',compact(['servicesPage']));
+        return view('pages.services',['servicesPage' => $this->servicesPage]);
     }
 
     /**
@@ -65,9 +79,7 @@ class MainController extends Controller
     public function countries()
     {
         $country = Country::all();
-        $countryPage = \App\Models\CountryPage::first();
-        $mainForm = \App\Models\MainForm::first();
-        return view('pages.packages',compact('country','countryPage','mainForm'));
+        return view('pages.packages',['country' => $country,'countryPage' => $this->countryPage,'mainForm' => $this->mainForm]);
     }
 
     /**
@@ -76,8 +88,7 @@ class MainController extends Controller
     public function tours()
     {
         $destination = Destination::all();
-        $destinationPage = \App\Models\TourPage::first();
-        return view('pages.destination',compact('destination','destinationPage'));
+        return view('pages.destination',['destination' => $destination,'destinationPage' => $this->destinationPage]);
     }
 
     /**
@@ -109,8 +120,6 @@ class MainController extends Controller
      */
     public function contact()
     {
-        $contactPage = \App\Models\ContactPage::first();
-        $contactForm = \App\Models\ContactForm::first();
-        return view('pages.contact',compact('contactPage','contactForm'));
+        return view('pages.contact',['contactPage' => $this->contactPage,'contactForm' => $this->contactForm]);
     }
 }
