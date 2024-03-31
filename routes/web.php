@@ -44,8 +44,6 @@ Route::get('/team', [MainController::class,'team'])->name('team')->middleware('l
 
 Route::get('/testimonial', [MainController::class,'testimonial'])->name('testimonial')->middleware('localization');
 
-Route::get('/404', [MainController::class,'page404'])->name('404')->middleware('localization');
-
 Route::get('/contact', [MainController::class,'contact'])->name('contact')->middleware('localization');
 
 Route::post('/contact/save', [ContactController::class,'save'])->name('saveContact');

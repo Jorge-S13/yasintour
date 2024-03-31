@@ -113,8 +113,4 @@ class MainController extends Controller
         $contactForm = \App\Models\ContactForm::first();
         return view('pages.contact',compact('contactPage','contactForm'));
     }
-    public function page404()
-    {
-        return view('pages.404');
-    }
 }
